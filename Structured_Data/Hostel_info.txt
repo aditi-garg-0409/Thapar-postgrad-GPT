@@ -1,0 +1,408 @@
+### Amritam Hall (Previously: Hostel-B)
+- Type: Boys
+- Capacity: 724
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden: Dr. Mohit Agarwal (Contact: 91 8288088161, Email: wardenb@thapar.edu)
+- Assistant Warden: Dr. Atul Kumar Upadhyay
+- Day Caretaker: Mr. Hardeep Singh, Mr. Avtar Singh (Phone: 9115608802)
+- Night Caretaker: Mr. Maninder Singh, Mr. Hardeep Singh (Phone: 9855594440)
+- Email ID Caretaker:  caretaker.b@thapar.edu
+- Reception Contact Number: 9115611512
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Not available
+  - 2 Sharing: Available
+  - Single Room Availability: Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 3
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 21:00:00
+
+
+### Prithvi Hall (Previously: Hostel-C)
+- Type: Boys
+- Capacity: 387
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden:  Dr. Hari Shankar (Contact: 7977389955, Email:  wardenc@thapar.edu)
+- Assistant Warden:         -
+- Day Caretaker:  Mr. Gurmeet Singh (Phone: 9115608803)
+- Night Caretaker:  Nishan Singh (Phone: 9464969982)
+- Email ID Caretaker: caretaker.c@thapar.edu
+- Reception Contact Number: 9115611513
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Available
+  - 2 Sharing: Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 2
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 21:00:00
+
+
+### Neeram Hall (Previously: Hostel-D)
+- Type: Boys
+- Capacity: 928
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden:  Dr. Rajendra Kumar Godara (Contact: 9115600146, 9456338299, Email: wardend@thapar.edu)
+- Assistant Warden: Dr. Danie Roy
+- Day Caretaker: Mr. Mandeep Daniel, Mr. Manish Kumar (Phone: 8860609206)
+- Night Caretaker: Mr. Arwinder Singh, Mr. Gurvinder Singh (Phone: 9855684107)
+- Email ID Caretaker: caretaker.d@thapar.ed
+- Reception Contact Number: 9115600155
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Not Available
+  - 2 Sharing: Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 9
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 21:00:00
+
+
+### Vyan Hall (Previously: Hostel-H)
+- Type: Boys
+- Capacity: 680
+- AC Room Availability: Available (only for 4 sharing)
+- Mess Fees: 25500
+- Warden:  Dr. Sandeep Pandey (Contact: 8288008179, Email: wardenh@thapar.edu)
+- Assistant Warden:        -
+- Day Caretaker: Mr. Varinderdeep Singh (Phone: 9115608833)
+- Night Caretaker:  Mr. Preetinder Singh (Phone: 9115611518)
+- Email ID Caretaker: caretaker.h@thapar.edu
+- Reception Contact Number: 9115611518
+- Room Sharing:
+  - 4 Sharing:  Available
+  - 3 Sharing: Available
+  - 2 Sharing: Not Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 3
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 21:00:00
+
+
+### Tejas Hall (Previously: Hostel-J)
+- Type: Boys
+- Capacity: 1170
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden:  Dr. Munish Kansal (Contact: 9115608845, Email: wardenj@thapar.edu)
+- Assistant Warden:  Dr. Arpit Goyal
+- Day Caretaker:  Mr. Raj Kumar, Mr. Jaspal Singh (Phone: 8559010110)
+- Night Caretaker:  Mr. Ajay Kumar, Mr. Ram Naresh (Phone: 7986578196)
+- Email ID Caretaker: caretaker.j@thapar.edu
+- Reception Contact Number: 9115611520
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Available
+  - 2 Sharing: Not Available
+  - Single Room Availability: Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 7
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 21:00:00
+
+
+### Ambaram Hall (Previously: Hostel-K)
+- Type: Boys
+- Capacity: 600
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden:  Dr. Neeraj Kumar (Contact: 9115608898, Email: warden.k@thapar.edu)
+- Assistant Warden:    -
+- Day Caretaker: Mr. Kuldeep Singh (Phone: 7508380066)
+- Night Caretaker: Mr. Satnam Singh (Phone: 8427993205)
+- Email ID Caretaker: caretaker.k@thapar.ed
+- Reception Contact Number: 9115611521
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Not Available
+  - 2 Sharing: Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 3
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 21:00:00
+
+
+### Viyat Hall (Previously: Hostel-L)
+- Type: Boys
+- Capacity: 300
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden: Dr. Bharat Garg (Contact: 9115608834, Email: wardenl@thapar.edu)
+- Assistant Warden:    -
+- Day Caretaker: Ms. Rajesh Kumar (Phone: 9115608840)
+- Night Caretaker: Mr. Rajat Malik (Phone: 9463217993)
+- Email ID Caretaker: caretaker.l@thapar.edu
+- Reception Contact Number: 9115611522
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Not Available
+  - 2 Sharing: Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 3
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 21:00:00
+
+
+### Anantam Hall (Previously: Hostel-M)
+- Type: Boys
+- Capacity: 1148
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden: Dr. Rahul Upadhaya (Contact:   -, Email: wardenm1@thapar.edu, wardenm2@thapar.edu)
+- Assistant Warden: Dr. Yogesh Tatte
+- Day Caretaker:  Mr. Satgur Singh, Mr. Arun Mattu,Mr. Maninderpal Singh (Phone: 7889523067)
+- Night Caretaker:  Mr. Jagseer Singh, Mr. Amrinder Sing (Phone: 9464600180)
+- Email ID Caretaker: caretaker.m@thapar.edu
+- Reception Contact Number: 9115611523                             ​
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Not Available
+  - 2 Sharing: Available
+  - Single Room Availability: Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 9
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 21:00:00
+
+
+### Vyom Hall (Previously: Hostel-O)
+- Type: Boys
+- Capacity: 928
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden: Dr. Anil Arora (Contact: :8437701902,9873153996, Email:  warden.o@thapar.edu)
+- Assistant Warden: Dr. Sachin Kansal
+- Day Caretaker: Mr. Navjot Sharma, Mr. Jaspreet Singh (Phone: 9056080375, 7009039508)
+- Night Caretaker: Mr. Rajeev Jindal, Gurvinder Singh (Phone: 769667652, 869967720)
+- Email ID Caretaker: caretaker.o@thapar.edu
+- Reception Contact Number: 9115611514
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Not Available
+  - 2 Sharing: Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 9
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 21:00:00
+
+
+### Hotel -FRF/G (Previously:   -)
+- Type: Boys
+- Capacity:          -
+- AC Room Availability: Not Available
+- Mess Fees: 25500
+- Warden: Dr. Parmod Kumar (Contact:      -, Email: wardenmfrfg@thapar.edu)
+- Assistant Warden:    -
+- Day Caretaker: Mr. Birjesh kumar (Phone: 9878667829)
+- Night Caretaker:    - (Phone:      -)
+- Email ID Caretaker: caretaker.frfg@thapar.edu
+- Reception Contact Number:            -
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Available
+  - 2 Sharing: Not Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 9
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 21:00:00
+
+
+### Agira Hall (Previously: Hostel-A)
+- Type: Girls
+- Capacity: 928
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden:  M.Vasundhara (Contact: 8288008174 , 9115600000, Email: wardena@thapar.edu)
+- Assistant Warden: Trishna Choudhury
+- Day Caretaker: Mr. Sandeep Singh, Mrs. Jasvir kaur (Phone: 9115608801)
+- Night Caretaker: Mrs. Suman Kumari, Mrs. Gagandeep Kaur, Ms. Lakhvir Kaur, (Phone: 9115608815)
+- Email ID Caretaker: caretaker.a@thapar.edu
+- Reception Contact Number: 9115611510
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Not Available
+  - 2 Sharing: Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 9
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 20:30:00
+
+
+### Vasudha Hall (Previously: Hostel-E)
+- Type: Girls
+- Capacity: 234
+- AC Room Availability: Not Available
+- Mess Fees: 25500
+- Warden:  Dr. Vasundhara Reddy (Contact: 0175-2393055, 0175-2393175, 8288008174, Email: wardene@thapar.edu)
+- Assistant Warden:     -
+- Day Caretaker: S. Mukhtiar Singh, (Phone: 9115608806)
+- Night Caretaker:  Mrs. Rinkle sharma, Mrs. Ranjit Kaur (Phone: 9115608812)
+- Email ID Caretaker:  caretaker.e@thapar.edu
+- Reception Contact Number: 9115611515
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Available
+  - 2 Sharing: Not Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 3
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 20:30:00
+
+
+### Vasudha Hall (Previously: Hostel-G)
+- Type: Girls
+- Capacity: 234
+- AC Room Availability: Not Available
+- Mess Fees: 25500
+- Warden: Dr. Deepshikha Tiwari (Contact:   -, Email: wardeng@thapar.edu)
+- Assistant Warden:  -
+- Day Caretaker: Mr. Parshotam Lal (Phone: 9115608809)
+- Night Caretaker: :Mrs. Sunita Sharma (Phone: 9115608813)
+- Email ID Caretaker:  caretaker.g@thapar.edu
+- Reception Contact Number: 9115611517
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Available
+  - 2 Sharing: Not Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 3
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 20:30:00
+
+
+### Ira Hall (Previously: Hostel-I)
+- Type: Girls
+- Capacity: 406
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden: Dr. Neetu Singh (Contact:   -, Email: wardeni@thapar.edu)
+- Assistant Warden:   -
+- Day Caretaker: Mrs. Mandeep Kaur, Mr. Satnam Singh (Phone:  9115608807, 9034266322)
+- Night Caretaker: Ms. Varinder Kaur (Phone: 6280502470)
+- Email ID Caretaker:  caretaker.i@thapar.edu
+- Reception Contact Number: 9115611519
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Available
+  - 2 Sharing: Not Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 5
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 20:30:00
+
+
+### Ananta Hall (Previously: Hostel-N)
+- Type: Girls
+- Capacity: 500
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden: Dr. Nidhi Kalra (Contact: 7719619800, Email: wardenn@thapar.edu)
+- Assistant Warden: Dr. Anu Mittal
+- Day Caretaker: Mr. Kuldeep Singh, Mrs. Sukhwinder Kaur (Phone: 9115608810)
+- Night Caretaker: Mrs. Jyoti Baduani, Mrs Sukhwinder Kaur (Phone: 8847448020)
+- Email ID Caretaker: caretaker.n@thapar.edu
+- Reception Contact Number: 9115611524
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Not Available
+  - 2 Sharing: Available
+  - Single Room Availability: Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 9
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 20:30:00
+
+
+### Hostel-PG (Previously:   -)
+- Type: Girls
+- Capacity: 404
+- AC Room Availability:     -
+- Mess Fees: 25500
+- Warden: Dr. Anju Bala (Contact:  -, Email: wardenpg@thapar.edu)
+- Assistant Warden:    -
+- Day Caretaker: Mr. Akash Sharma (Phone: 6280495076)
+- Night Caretaker: Mrs. Ranjit Kaur (Phone: 8557072772)
+- Email ID Caretaker:  caretaker.pg@thapar.edu
+- Reception Contact Number: 9115608811
+- Room Sharing:
+  - 4 Sharing:     -
+  - 3 Sharing:     - 
+  - 2 Sharing:      - 
+  - Single Room Availability:      - 
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor):     -
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 20:30:00
+
+
+### Vahni Hall (Previously: Hostel-Q)
+- Type: Girls
+- Capacity: 928
+- AC Room Availability: Available
+- Mess Fees: 25500
+- Warden: Dr. Anju Bala (Contact: 828808175, Email: wardenq@thapar.edu)
+- Assistant Warden: Dr. Parimita RoyDr. Swati Sondhi 
+- Day Caretaker: Mr. Deepak Batish, Mrs. Amandeep Rani (Phone: 9815557057)
+- Night Caretaker: Mrs. Dilpreet Kaur, Mrs. Pooja (Phone: 9115608814)
+- Email ID Caretaker: caretaker.q@thapar.edu
+- Reception Contact Number: 9115611516
+- Room Sharing:
+  - 4 Sharing: Not Available
+  - 3 Sharing: Not Available
+  - 2 Sharing: Available
+  - Single Room Availability: Not Available
+- Wi-Fi: Available
+- Lift: Available
+- Number of Floors (including ground floor): 9
+- Laundry Service: Available
+- Late Night Mess: Available
+- Late Entry Timings: 20:30:00
+
+
