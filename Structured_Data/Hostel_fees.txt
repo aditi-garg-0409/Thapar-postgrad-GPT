@@ -1,0 +1,255 @@
+### nan
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: Common Washrooms
+    - AC: Common Washroom
+  - 2 Sharing:
+    - Non-AC: Common Washroom
+    - AC: Common Washrooms
+  - 3 Sharing:
+    - Non-AC: Common Washroom
+    - AC: Common Washroom
+  - 4 Sharing:
+    - Non-AC: Common Washroom
+    - AC: Common Washroom
+
+### Agira Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: 49000
+    - AC: -
+  - 2 Sharing:
+    - Non-AC: 43500
+    - AC: nan
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+
+### Amritam Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: 56500
+  - 2 Sharing:
+    - Non-AC: nan
+    - AC: 53500
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+
+### Prithvi Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: -
+  - 2 Sharing:
+    - Non-AC: nan
+    - AC: 53500
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: 47000
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+
+### Vasudha Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: 56500
+  - 2 Sharing:
+    - Non-AC: nan
+    - AC: 53500
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: 47000
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: 42100
+
+### Vasudha Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: 56500
+  - 2 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: 47000
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: 42100
+
+### Vyan Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: -
+  - 2 Sharing:
+    - Non-AC: 43500
+    - AC: nan
+  - 3 Sharing:
+    - Non-AC: 37500
+    - AC: 47000
+  - 4 Sharing:
+    - Non-AC: 32600
+    - AC: 42100
+
+### Ira Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: 49000
+    - AC: 56500
+  - 2 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 3 Sharing:
+    - Non-AC: 37500
+    - AC: 47000
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+
+### Tejas Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: 49000
+    - AC: nan
+  - 2 Sharing:
+    - Non-AC: 43500
+    - AC: nan
+  - 3 Sharing:
+    - Non-AC: 37500
+    - AC: nan
+  - 4 Sharing:
+    - Non-AC: 32600
+    - AC: nan
+
+### Ambaram Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: -
+  - 2 Sharing:
+    - Non-AC: 43500
+    - AC: 53500
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+
+### Viyat Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: -
+  - 2 Sharing:
+    - Non-AC: nan
+    - AC: 53500
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+
+### Anantam Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: nan
+  - 2 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+
+### Ananta Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: nan
+  - 2 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+
+### Vyom Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: -
+  - 2 Sharing:
+    - Non-AC: nan
+    - AC: 53500
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+
+### Hostel FRF/FRG
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: 49000
+    - AC: -
+  - 2 Sharing:
+    - Non-AC: 43500
+    - AC: 53500
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+
+### Vahni Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: -
+  - 2 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+
+### Neeram Hall
+- Room Types and Washroom Details:
+  - 1 Sharing:
+    - Non-AC: -
+    - AC: nan
+  - 2 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 3 Sharing:
+    - Non-AC: nan
+    - AC: nan
+  - 4 Sharing:
+    - Non-AC: nan
+    - AC: nan
+

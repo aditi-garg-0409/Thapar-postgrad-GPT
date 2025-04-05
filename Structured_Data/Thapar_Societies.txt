@@ -1,0 +1,126 @@
+###Chemist’s Association for Research and Education Society (CARE)
+-Objective:Promotes chemical research and education for societal benefit, encouraging students to pursue science careers and providing a platform for scientific growth.
+-Faculty Advisors:Dr. Soumen Basu, Dr. Vikas Tyagi
+-Contact Email:score@thapar.edu
+
+
+###Creative Computing Society (CCS)
+-Objective:Encourages analytical thinking in technology and innovation, conducting workshops and coding competitions. Collaborates with organizations like Google Developers Group and Mozilla Webmaker.
+-Faculty Advisors:Dr. Anju Bala, Dr. Gurpal Singh
+-Contact Email:ccs@thapar.edu
+
+
+###Elpis, the Psychology Society
+-Objective:Open to all interested in psychology, enhancing academic experiences through seminars, activities, and fostering insight into the psychological field.
+-Faculty Advisors:Dr. Ipshita Chowdhury, Dr. Anuradha Walia
+-Contact Email:elpis@thapar.edu
+
+
+###Enactus Thapar
+-Objective:A community of students, academic, and business leaders committed to using entrepreneurial action to transform lives and shape a better world.
+-Faculty Advisors:Dr. Gagandeep Kaur, Dr. Ashish Kumar Gupta
+-Contact Email:enactus@thapar.edu
+
+
+###Entrepreneurship Development Cell (EDC)
+-Objective:Aims to foster entrepreneurial spirit among students, providing guidance and resources to develop and implement business ideas.
+-Faculty Advisors:Dr. M.D. Singh, Dr. Vineet Srivastava, Dr. Rajnish Mallick
+-Contact Email:edc@thapar.edu
+
+
+###Eureka Prize Problems
+-Objective:Promotes research ambience among undergraduate students through competitions, expert talks, seminars, webinars, technical sessions, and encourages writing research articles.
+-Faculty Advisors:Dr. Souvik Ganguli, Dr. Amit Kumar
+-Contact Email:eureka@thapar.edu
+
+
+###Fine Arts and Photography Society (FAPS)
+-Objective:Grooms engineering and management graduates to express through art, offering workshops on sketching, painting, photography, calligraphy, and Photoshop.
+-Faculty Advisors:Dr. Ashima Singh, Dr. Vikas Sharma, Dr. Prabhleen Kaur
+-Contact Email:faps@thapar.edu
+
+
+###Frosh Week
+-Objective:Welcomes first-year students, organizing orientation programs and activities to help them integrate into the institute.
+-Faculty Advisors:Dr. Hem Dutt Joshi, Dr. Avinash Chandra, Dr. Vishal Gupta, Dr. Devender Kumar, Dr. Tarunpreet Bhatia
+-Contact Email:frosh@thapar.edu
+
+
+###GENE
+-Objective:Promotes professional development in biotechnology through workshops, panel discussions, guest lectures, and cultural events celebrating diversity.
+-Faculty Advisors:Dr. Bunushree Behera, Dr. Jyotsana Mehta
+-Contact Email:gene@thapar.edu
+
+
+###GirlUpTIET Society
+-Objective:A United Nations Foundation’s adolescent girl campaign, envisioning a world where every girl can reach her full potential, organizing events to instill social empowerment among girls.
+-Faculty Advisors:Dr. Gurvinder Kaur, Dr. Surbhi Sharma
+-Contact Email:girlup@thapar.edu
+
+
+###LEAD Society
+-Objective:Focuses on leadership and development, organizing events and workshops to cultivate leadership skills among students.
+-Faculty Advisors:Dr. Hem Dutt Joshi, Dr. Avinash Chandra
+-Contact Email:lead@thapar.edu
+
+
+###Linux User Group - TIET
+-Objective:Connects science and technology to real-world problems, promoting understanding of science in societal contexts.
+-Faculty Advisors:Dr. Maninder Singh
+-Contact Email:lugtu@thapar.edu
+
+
+###Literary Society
+-Objective:Inculcates a keen sense of language and appreciation for various literary expressions, organizing events to enhance communication skills.
+-Faculty Advisors:Dr. Apurva Bakshi, Dr. Surbhi Sharma
+-Contact Email:litsoc@thapar.edu
+
+
+###Materials and Physics Society (MAPS)
+-Objective:Provides a platform for students interested in materials science and physics to collaborate, learn, and participate in related activities.
+-Faculty Advisors:Dr. Anil Kumar Pal
+-Contact Email:maps@thapar.edu
+
+
+###Mechatronics and Robotics Society
+-Objective:Offers a platform for students from various engineering backgrounds to hone skills and showcase talent in interdisciplinary activities related to mechatronics and robotics.
+-Faculty Advisors:Dr. Anil Kumar Pal
+-Contact Email:mars@thapar.edu
+
+
+###Music and Dramatic Society (MUDRA)
+-Objective:Hones extracurricular skills in music and dramatics, developing managerial prowess and contributing to overall personality development.
+-Faculty Advisors:Dr. Manisha Kaushal, Dr. Tanu Goyal
+-Contact Email:mudra@thapar.edu
+
+
+###Paryavaran Welfare Society (PWS)
+-Objective:Promotes environmental awareness and sustainability through various initiatives and activities.
+-Faculty Advisors:Dr. Anil Kumar, Dr. Anju Gupta
+-Contact Email:pws@thapar.edu
+
+
+###Pratigya Society
+-Objective:Focuses on social service initiatives, working towards the betterment of underprivileged sections of society through various programs.
+-Faculty Advisors:Dr. Anjali Sharma, Dr. Rohit Verma
+-Contact Email:pratigya@thapar.edu
+
+
+###Society for Promotion of Indian Classical Music & Culture Amongst Youth (SPIC MACAY)
+-Objective:Promotes Indian classical music and culture among students through concerts, workshops, and lectures.
+-Faculty Advisors:Dr. Anurag Sharma, Dr. Pooja Gupta
+-Contact Email:spicmacay@thapar.edu
+
+
+###Society of Mechanical and Industrial Engineers (SOMIE)
+-Objective:Provides a platform for mechanical and industrial engineering students to engage in technical activities, workshops, and industry interactions.
+-Faculty Advisors:Dr. Rajiv Kumar, Dr. Seema Rani
+-Contact Email:somie@thapar.edu
+
+
+###Spiritual Scientists’ Alliance (SSA)
+-Objective:Explores the intersection of spirituality and science, organizing discussions and events on related topics.
+-Faculty Advisors:Dr. Anil Kumar Pal
+-Contact Email:ssa@thapar.edu
+
+
