@@ -1,16 +1,37 @@
 import os
-from dotenv import load_dotenv
-from huggingface_hub import InferenceClient
 import chromadb
-from chromadb.utils import embedding_functions
+from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
+# from transformers import
 
 
-load_dotenv()
+class DataLoader:
+    def __init__(self):
+        self.data_dir = "Structured_Data"
+    def load_files(self):
+        data = {}
+        for filename in os.listdir(self.data_dir):
+            if filename.endswith('.txt'):
+                with open(os.path.join(self.data_dir,filename),'r') as f:
+                    data[filename]=f.read()
+        return data
+class EmbeddingModel:
+    def __init__(self):
+        self.model = SentenceTransformer("all-MiniLM-L12-v2")
+    def embed(self,txt):
+        return self.model.encode(txt)
 
-hf_api_key = os.getenv("HUGGINGFACE_API_KEY")
-
-
-if not hf_api_key:
-    raise ValueError("Hugging Face api key not found. Check .env file.")
-
+class VectorDB(DataLoader):
+    def __init__(self):
+        super().__init__()
+        self.client = chromadb.PersistentClient()
+        self.embedder = EmbeddingModel()
+        self.collections = {}
+        self.incollections()   
+    def incollections(self):
+        
+        file_types = {
+            
+        }
+        
+        
