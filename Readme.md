@@ -35,20 +35,16 @@ A Retrieval-Augmented Generation (RAG) system designed to answer queries about T
 5. Usage 
    ```python
    from assistant import ThaparAssistant
-
-# Initialize
-assistant = ThaparAssistant()
-
-# Query examples
-queries = [
+   assistant = ThaparAssistant()
+   Query examples
+   queries = [
     "What are hostel fees for 2-sharing rooms?",
     "Which societies are best for coders?",
     "Tell me about MSc scholarships"
-]
-
-for query in queries:
-    print(f"Q: {query}")
-    print(f"A: {assistant.ask(query)}\n")
+    ]
+    for query in queries:
+        print(f"Q: {query}")
+        print(f"A: {assistant.ask(query)}\n")
 6. Limitations
    1. Requires accurate source data formatting
    2. Falcon-7B may hallucinate without strict prompting
