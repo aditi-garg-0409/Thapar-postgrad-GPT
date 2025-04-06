@@ -49,3 +49,16 @@ A Retrieval-Augmented Generation (RAG) system designed to answer queries about T
    1. Requires accurate source data formatting
    2. Falcon-7B may hallucinate without strict prompting
    3. ChromaDB collections need manual reset for data updates
+
+7. TroubleShooting
+   -Problem : Hallucinated answers
+   -Solution : Strengthen Prompt Constraints
+   ```python
+   def build_prompt(self, query, context):
+    return f"""Answer ONLY using:
+    {context}
+    Rules:
+    1. Never invent numbers
+    2. Use only Rs for currency
+    3. If unsure, say "Not in records"
+    Answer:"""
