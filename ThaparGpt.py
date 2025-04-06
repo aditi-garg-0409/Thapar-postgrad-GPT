@@ -21,6 +21,8 @@ class EmbeddingModel:
     def __init__(self):
         self.model = SentenceTransformer("all-MiniLM-L6-v2")
     def embed(self,txt):
+        if isinstance(txt, str):
+            txt = [txt]
         return self.model.encode(txt)
 
 class VectorDB(DataLoader):
@@ -44,7 +46,7 @@ class VectorDB(DataLoader):
         }
         
         for col_type,files in file_types.items():
-            col_name = f"{'thapar_'}{col_type}"
+            col_name = f"thapar_{col_type}"
             self.collections[col_type] = self.client.create_collection(name=col_name)
     def chunkData(self,txt,delimiter = "###"):
         return [chunk.strip() for chunk in txt.split(delimiter) if chunk.strip()]
@@ -60,21 +62,29 @@ class VectorDB(DataLoader):
                 col_type = "activities"
             
             chunks = self.chunkData(content)
-            embeddings = self.embedder.embed(chunks).tolist()
+            embeddings = self.embedder.embed(chunks)
             self.collections[col_type].add(
                 documents = chunks,
                 embeddings = embeddings,
                 ids = [f"{filename}_{i}" for i in range(len(chunks))],
                 metadatas =[{"source":filename}]*len(chunks)
             )
+        # After populate_db(), add verification:
+        # print("Collection counts:")
+        # for name, col in self.collections.items():
+        #     print(f"{name}: {col.count()} items")
     
     def query(self,query,collection_type,top_k=2):
-        query_embeddings = self.embedder.embed(query).tolist()
-        results = self.collections[collection_type].query(
-            query_embeddings = [query_embeddings],
-            top_k = top_k
-        )
-        return results["documents"][0]
+        try:
+            query_embeddings = self.embedder.embed([query])
+            results = self.collections[collection_type].query(
+                query_embeddings = query_embeddings.tolist(),
+                n_results = top_k
+            )
+            return results["documents"][0]
+        except Exception as e:
+            print(f"\nQuery Errors:{str(e)}")
+            raise
 class Falcon7B:
     def __init__(self):
         load_dotenv()
@@ -107,6 +117,20 @@ class ThaparAssistant(VectorDB,Falcon7B):
         VectorDB.__init__(self)
         Falcon7B.__init__(self)
         self.populate_db()
+        print("\nTESTING VECTORDB QUERIES:")
+        test_queries = [
+            ("hostel fees", "hostels"),
+            ("coding society", "activities"),
+            ("scholarship", "academics")
+        ]
+        
+        for query, col_type in test_queries:
+            try:
+                results = self.query(query, col_type)
+                print(f"\nQuery: '{query}'")
+                print(f"Results: {results}")
+            except Exception as e:
+                print(f"Query failed: {str(e)}")
         
     def _determineCollectionType(self,query):
         query_lower =query.lower()
@@ -118,9 +142,10 @@ class ThaparAssistant(VectorDB,Falcon7B):
             return "activities"
     def builPrompt(self,query,context):
         context_str="\n".join(context)
-        return f""" Answer question using only this context : {context_str}
-    else say I don't know the answer to question:{query} and ask user to update the database. 
-    Answer.. """
+        return f"""Answer using ONLY this context. If unsure, say "I don't know."
+Context: {context_str}
+Question: {query}
+Answer:"""
     
     def ask(self,query):
         try:
@@ -128,7 +153,6 @@ class ThaparAssistant(VectorDB,Falcon7B):
             context = self.query(query,col_type)
             prompt = self.builPrompt(query,context)
             response= self.generate(prompt)
-            
             return response
         except Exception as e:
             return "Sorry for the inconvience . An error occured."
@@ -143,6 +167,8 @@ queries = [
         "Tell me about MSc scholarships for 8.5 CGPA students"
 ]
 
+
 for query in queries:
     print(f"\n{query}")
     print(f"\n{assistant.ask(query)}")
+
