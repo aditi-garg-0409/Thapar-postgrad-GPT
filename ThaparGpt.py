@@ -95,7 +95,7 @@ class Falcon7B:
         self.client = InferenceClient(token=self.hf_api_key)
 
     
-    def generate(self,prompt,max_new_token=100,temprature = 0.7,top_p = 0.9,reptition_penalty = 1.1):
+    def generate(self,prompt,max_new_token=100,temprature = 0.1,top_p = 0.9,reptition_penalty = 1.5):
         try:
             response = self.client.text_generation(
                 prompt=prompt,
@@ -104,7 +104,7 @@ class Falcon7B:
                 temperature= temprature,
                 top_p=top_p,
                 repetition_penalty=reptition_penalty,
-                do_sample=True
+                do_sample=False
             )
             return response.strip()
         except Exception as e:
@@ -117,20 +117,20 @@ class ThaparAssistant(VectorDB,Falcon7B):
         VectorDB.__init__(self)
         Falcon7B.__init__(self)
         self.populate_db()
-        print("\nTESTING VECTORDB QUERIES:")
-        test_queries = [
-            ("hostel fees", "hostels"),
-            ("coding society", "activities"),
-            ("scholarship", "academics")
-        ]
+        # print("\nTESTING VECTORDB QUERIES:")
+        # test_queries = [
+        #     ("hostel fees", "hostels"),
+        #     ("coding society", "activities"),
+        #     ("scholarship", "academics")
+        # ]
         
-        for query, col_type in test_queries:
-            try:
-                results = self.query(query, col_type)
-                print(f"\nQuery: '{query}'")
-                print(f"Results: {results}")
-            except Exception as e:
-                print(f"Query failed: {str(e)}")
+        # for query, col_type in test_queries:
+        #     try:
+        #         results = self.query(query, col_type)
+        #         print(f"\nQuery: '{query}'")
+        #         print(f"Results: {results}")
+        #     except Exception as e:
+        #         print(f"Query failed: {str(e)}")
         
     def _determineCollectionType(self,query):
         query_lower =query.lower()
@@ -140,23 +140,37 @@ class ThaparAssistant(VectorDB,Falcon7B):
             return "academics"
         else:
             return "activities"
-    def builPrompt(self,query,context):
-        context_str="\n".join(context)
-        return f"""Answer using ONLY this context. If unsure, say "I don't know."
-Context: {context_str}
-Question: {query}
-Answer:"""
+    def build_prompt(self, query, context):
+        context_str = "\n\n".join([
+            f"CONTEXT {i+1}:\n{text}" 
+            for i, text in enumerate(context)
+            ])
+        return f"""You are a strict factual assistant for Thapar University. 
+    NEVER invent information - only use what's provided below. 
+    Respond with EXACTLY ONE SENTENCE.
+    RELEVANT FACTS:
+    {context_str}
+    USER QUESTION: {query}
+    RULES:
+    1. If the answer isn't in the facts, say "Information not found in records"
+    2. Never mention dollars - only use ₹
+    3. Use only the exact numbers from context
+    RESPONSE:"""
     
-    def ask(self,query):
+    def ask(self, query):
         try:
-            col_type=self._determineCollectionType(query)
-            context = self.query(query,col_type)
-            prompt = self.builPrompt(query,context)
-            response= self.generate(prompt)
+            col_type = self._determineCollectionType(query)
+            context = self.query(query, col_type)
+            print(f"\nRETRIEVED CONTEXT FOR '{query}':")
+            for i, text in enumerate(context, 1):
+                print(f"[Context {i}]: {text[:150]}...")
+            prompt = self.build_prompt(query, context)
+            response = self.generate(prompt)
+            if "Rs" not in response and any("Rs" in ctx for ctx in context):
+                response = "Information not found in records"
             return response
         except Exception as e:
-            return "Sorry for the inconvience . An error occured."
-
+            return f"System error: {str(e)}"
 
 
 
