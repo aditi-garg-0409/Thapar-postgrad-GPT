@@ -1,5 +1,6 @@
 import os
 import chromadb
+from chromadb import EmbeddingFunction
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 # from transformers import AutoTokenizer,AutoModelForCasualLM
@@ -18,7 +19,7 @@ class DataLoader:
         return data
 class EmbeddingModel:
     def __init__(self):
-        self.model = SentenceTransformer("all-MiniLM-L12-v2")
+        self.model = SentenceTransformer("all-MiniLM-L6-v2")
     def embed(self,txt):
         return self.model.encode(txt)
 
@@ -28,6 +29,11 @@ class VectorDB(DataLoader):
         self.client = chromadb.PersistentClient()
         self.embedder = EmbeddingModel()
         self.collections = {}
+        for collection_name in ["thapar_hostels", "thapar_academics", "thapar_activities"]:
+            try:
+                self.client.delete_collection(collection_name)
+            except:
+                pass
         self.incollections()   
     def incollections(self):
         
@@ -46,9 +52,9 @@ class VectorDB(DataLoader):
         files_data = self.load_files()
         
         for filename,content in files_data.items():
-            if 'hostel' in filename:
+            if 'hostel' in filename.lower():
                 col_type ="hostels"
-            elif 'scholarship' in filename or 'Course' in filename():
+            elif 'scholarship' in filename.lower() or 'Course' in filename.lower():
                 col_type = "academics"
             else:
                 col_type = "activities"
