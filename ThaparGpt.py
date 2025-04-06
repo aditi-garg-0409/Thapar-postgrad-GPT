@@ -3,7 +3,6 @@ import chromadb
 from chromadb import EmbeddingFunction
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
-# from transformers import AutoTokenizer,AutoModelForCasualLM
 from huggingface_hub import InferenceClient
 
 
