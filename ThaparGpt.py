@@ -133,7 +133,7 @@ class ThaparAssistant(VectorDB,Falcon7B):
         
     def _determineCollectionType(self,query):
         query_lower =query.lower()
-        if any(kw in query_lower for kw in ["hostel","room","mess"]):
+        if any(kw in query_lower for kw in ["hostel","room","mess","sharing","Hall"]):
             return "hostels"
         elif any(kw in query_lower for kw in ["scholarships","fee","course"]):
             return "academics"
@@ -153,7 +153,9 @@ class ThaparAssistant(VectorDB,Falcon7B):
     RULES:
     1. If the answer isn't in the facts, say "Information not found in records"
     2. Never mention dollars - only use ₹
-    3. Use only the exact numbers from context
+    3. Use only the exact numbers from context.
+    4. Use similar words to the context.
+    5. If the answer is not in the context, say "Information not found in records"
     RESPONSE:"""
     
     def ask(self, query):
@@ -175,7 +177,8 @@ class ThaparAssistant(VectorDB,Falcon7B):
 
 assistant = ThaparAssistant()
 queries = [
-        "What are the fees for 2-sharing rooms in Hostel B?",
+        "What are the Boys hostels available in Thapar University?",
+        "What is the mess fee for agira hall ?",
         "Which coding-related societies exist?",
         "Tell me about MSc scholarships for 8.5 CGPA students"
 ]
