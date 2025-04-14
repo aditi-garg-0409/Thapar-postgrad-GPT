@@ -1,4 +1,4 @@
-### Amritam Hall (Previously: Hostel-B)
+###Amritam Hall (Previously: Hostel-B)
 - Type: Boys
 - Capacity: 724
 - AC Room Availability: Available
@@ -9,11 +9,11 @@
 - Night Caretaker: Mr. Maninder Singh, Mr. Hardeep Singh (Phone: 9855594440)
 - Email ID Caretaker:  caretaker.b@thapar.edu
 - Reception Contact Number: 9115611512
-- Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Not available
-  - 2 Sharing: Available
-  - Single Room Availability: Available
+- Room Available:
+  - 2 Sharing
+    - Fee : Rs. 53500 per Semester
+  - Single Room 
+    - Fee : Rs. 56500 per Semester
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 3
@@ -22,7 +22,7 @@
 - Late Entry Timings: 21:00:00
 
 
-### Prithvi Hall (Previously: Hostel-C)
+###Prithvi Hall (Previously: Hostel-C)
 - Type: Boys
 - Capacity: 387
 - AC Room Availability: Available
@@ -34,10 +34,10 @@
 - Email ID Caretaker: caretaker.c@thapar.edu
 - Reception Contact Number: 9115611513
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Available
-  - 2 Sharing: Available
-  - Single Room Availability: Not Available
+  - 3 Sharing
+    - Fee : Rs. 47000 per Semester
+  - 2 Sharing
+    - Fee : Rs. 53500 per Semester
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 2
@@ -46,7 +46,7 @@
 - Late Entry Timings: 21:00:00
 
 
-### Neeram Hall (Previously: Hostel-D)
+###Neeram Hall (Previously: Hostel-D)
 - Type: Boys
 - Capacity: 928
 - AC Room Availability: Available
@@ -58,10 +58,8 @@
 - Email ID Caretaker: caretaker.d@thapar.ed
 - Reception Contact Number: 9115600155
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Not Available
-  - 2 Sharing: Available
-  - Single Room Availability: Not Available
+  - 2 Sharing
+      -Fee : Rs. 58000 per Semester
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 9
@@ -70,7 +68,7 @@
 - Late Entry Timings: 21:00:00
 
 
-### Vyan Hall (Previously: Hostel-H)
+###Vyan Hall (Previously: Hostel-H)
 - Type: Boys
 - Capacity: 680
 - AC Room Availability: Available (only for 4 sharing)
@@ -82,10 +80,10 @@
 - Email ID Caretaker: caretaker.h@thapar.edu
 - Reception Contact Number: 9115611518
 - Room Sharing:
-  - 4 Sharing:  Available
-  - 3 Sharing: Available
-  - 2 Sharing: Not Available
-  - Single Room Availability: Not Available
+  - 4 Sharing:  
+      - Fee : Rs. 32600 per Semester without AC and 42100 per Semester with AC.
+  - 3 Sharing: 
+      - Fee : Rs. 37500 per Semester without AC and 47000 per Semester with AC.
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 3
@@ -94,7 +92,7 @@
 - Late Entry Timings: 21:00:00
 
 
-### Tejas Hall (Previously: Hostel-J)
+###Tejas Hall (Previously: Hostel-J)
 - Type: Boys
 - Capacity: 1170
 - AC Room Availability: Available
@@ -106,10 +104,10 @@
 - Email ID Caretaker: caretaker.j@thapar.edu
 - Reception Contact Number: 9115611520
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Available
-  - 2 Sharing: Not Available
-  - Single Room Availability: Available
+  - 3 Sharing: 
+      - Fee : Rs. 37500 per Semester 
+  - Single Room Availability: 
+      - Fee : Rs. 49000 per Semester
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 7
@@ -118,7 +116,7 @@
 - Late Entry Timings: 21:00:00
 
 
-### Ambaram Hall (Previously: Hostel-K)
+###Ambaram Hall (Previously: Hostel-K)
 - Type: Boys
 - Capacity: 600
 - AC Room Availability: Available
@@ -130,10 +128,8 @@
 - Email ID Caretaker: caretaker.k@thapar.ed
 - Reception Contact Number: 9115611521
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Not Available
-  - 2 Sharing: Available
-  - Single Room Availability: Not Available
+  - 2 Sharing: 
+    - Fee : Rs. 43500 per Semester without AC and Rs. 53500 with AC.
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 3
@@ -142,7 +138,7 @@
 - Late Entry Timings: 21:00:00
 
 
-### Viyat Hall (Previously: Hostel-L)
+###Viyat Hall (Previously: Hostel-L)
 - Type: Boys
 - Capacity: 300
 - AC Room Availability: Available
@@ -154,10 +150,8 @@
 - Email ID Caretaker: caretaker.l@thapar.edu
 - Reception Contact Number: 9115611522
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Not Available
-  - 2 Sharing: Available
-  - Single Room Availability: Not Available
+  - 2 Sharing: 
+      - Fee : Rs. 53500 per Semester
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 3
@@ -166,7 +160,7 @@
 - Late Entry Timings: 21:00:00
 
 
-### Anantam Hall (Previously: Hostel-M)
+###Anantam Hall (Previously: Hostel-M)
 - Type: Boys
 - Capacity: 1148
 - AC Room Availability: Available
@@ -178,10 +172,10 @@
 - Email ID Caretaker: caretaker.m@thapar.edu
 - Reception Contact Number: 9115611523                             ​
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Not Available
-  - 2 Sharing: Available
-  - Single Room Availability: Available
+  - 2 Sharing: 
+     - Fee : Rs. 58000 per Semester
+  - Single Room Availability: 
+     - Fee : Rs. 75000 per Semester
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 9
@@ -190,7 +184,7 @@
 - Late Entry Timings: 21:00:00
 
 
-### Vyom Hall (Previously: Hostel-O)
+###Vyom Hall (Previously: Hostel-O)
 - Type: Boys
 - Capacity: 928
 - AC Room Availability: Available
@@ -202,10 +196,8 @@
 - Email ID Caretaker: caretaker.o@thapar.edu
 - Reception Contact Number: 9115611514
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Not Available
-  - 2 Sharing: Available
-  - Single Room Availability: Not Available
+  - 2 Sharing: 
+      - Fee : Rs. 58000 per Semester
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 9
@@ -214,7 +206,7 @@
 - Late Entry Timings: 21:00:00
 
 
-### Hotel -FRF/G (Previously:   -)
+###Hostel -FRF/G (Previously:Hostel -FRF/G)
 - Type: Boys
 - Capacity:          -
 - AC Room Availability: Not Available
@@ -226,10 +218,8 @@
 - Email ID Caretaker: caretaker.frfg@thapar.edu
 - Reception Contact Number:            -
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Available
-  - 2 Sharing: Not Available
-  - Single Room Availability: Not Available
+  - 2 Sharing: 
+     - Fee : Rs. 58000 per Semester
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 9
@@ -238,7 +228,7 @@
 - Late Entry Timings: 21:00:00
 
 
-### Agira Hall (Previously: Hostel-A)
+###Agira Hall (Previously: Hostel-A)
 - Type: Girls
 - Capacity: 928
 - AC Room Availability: Available
@@ -250,10 +240,8 @@
 - Email ID Caretaker: caretaker.a@thapar.edu
 - Reception Contact Number: 9115611510
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Not Available
-  - 2 Sharing: Available
-  - Single Room Availability: Not Available
+  - 2 Sharing: 
+     - Fee : Rs. 58000 per Semester
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 9
@@ -262,7 +250,7 @@
 - Late Entry Timings: 20:30:00
 
 
-### Vasudha Hall (Previously: Hostel-E)
+###Vasudha Hall (Previously: Hostel-E)
 - Type: Girls
 - Capacity: 234
 - AC Room Availability: Not Available
@@ -274,10 +262,12 @@
 - Email ID Caretaker:  caretaker.e@thapar.edu
 - Reception Contact Number: 9115611515
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Available
-  - 2 Sharing: Not Available
-  - Single Room Availability: Not Available
+  - 3 Sharing: 
+     - Fee : Rs. 49500 per Semester
+  - 2 Sharing: 
+     - Fee : Rs. 58000 per Semester
+  - Single Room Availability: 
+     - Fee : Rs. 75000 per Semester
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 3
@@ -286,31 +276,7 @@
 - Late Entry Timings: 20:30:00
 
 
-### Vasudha Hall (Previously: Hostel-G)
-- Type: Girls
-- Capacity: 234
-- AC Room Availability: Not Available
-- Mess Fees: 25500
-- Warden: Dr. Deepshikha Tiwari (Contact:   -, Email: wardeng@thapar.edu)
-- Assistant Warden:  -
-- Day Caretaker: Mr. Parshotam Lal (Phone: 9115608809)
-- Night Caretaker: :Mrs. Sunita Sharma (Phone: 9115608813)
-- Email ID Caretaker:  caretaker.g@thapar.edu
-- Reception Contact Number: 9115611517
-- Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Available
-  - 2 Sharing: Not Available
-  - Single Room Availability: Not Available
-- Wi-Fi: Available
-- Lift: Available
-- Number of Floors (including ground floor): 3
-- Laundry Service: Available
-- Late Night Mess: Available
-- Late Entry Timings: 20:30:00
-
-
-### Ira Hall (Previously: Hostel-I)
+###Ira Hall (Previously: Hostel-I)
 - Type: Girls
 - Capacity: 406
 - AC Room Availability: Available
@@ -322,10 +288,10 @@
 - Email ID Caretaker:  caretaker.i@thapar.edu
 - Reception Contact Number: 9115611519
 - Room Sharing:
-  - 4 Sharing: Not Available
   - 3 Sharing: Available
-  - 2 Sharing: Not Available
-  - Single Room Availability: Not Available
+    - Fee : Rs. 49000 per Semester
+  - Single Room Availability:
+    - Fee : Rs. 56500 per Semester 
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 5
@@ -334,7 +300,7 @@
 - Late Entry Timings: 20:30:00
 
 
-### Ananta Hall (Previously: Hostel-N)
+###Ananta Hall (Previously: Hostel-N)
 - Type: Girls
 - Capacity: 500
 - AC Room Availability: Available
@@ -346,10 +312,10 @@
 - Email ID Caretaker: caretaker.n@thapar.edu
 - Reception Contact Number: 9115611524
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Not Available
-  - 2 Sharing: Available
-  - Single Room Availability: Available
+  - 2 Sharing: 
+    - Fee : Rs. 58000 per Semester
+  - Single Room Availability: 
+    - Fee : Rs. 75000 per Semester
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 9
@@ -358,31 +324,7 @@
 - Late Entry Timings: 20:30:00
 
 
-### Hostel-PG (Previously:   -)
-- Type: Girls
-- Capacity: 404
-- AC Room Availability:     -
-- Mess Fees: 25500
-- Warden: Dr. Anju Bala (Contact:  -, Email: wardenpg@thapar.edu)
-- Assistant Warden:    -
-- Day Caretaker: Mr. Akash Sharma (Phone: 6280495076)
-- Night Caretaker: Mrs. Ranjit Kaur (Phone: 8557072772)
-- Email ID Caretaker:  caretaker.pg@thapar.edu
-- Reception Contact Number: 9115608811
-- Room Sharing:
-  - 4 Sharing:     -
-  - 3 Sharing:     - 
-  - 2 Sharing:      - 
-  - Single Room Availability:      - 
-- Wi-Fi: Available
-- Lift: Available
-- Number of Floors (including ground floor):     -
-- Laundry Service: Available
-- Late Night Mess: Available
-- Late Entry Timings: 20:30:00
-
-
-### Vahni Hall (Previously: Hostel-Q)
+###Vahni Hall (Previously: Hostel-Q)
 - Type: Girls
 - Capacity: 928
 - AC Room Availability: Available
@@ -394,10 +336,8 @@
 - Email ID Caretaker: caretaker.q@thapar.edu
 - Reception Contact Number: 9115611516
 - Room Sharing:
-  - 4 Sharing: Not Available
-  - 3 Sharing: Not Available
   - 2 Sharing: Available
-  - Single Room Availability: Not Available
+    - Fee : Rs. 58000 per Semester 
 - Wi-Fi: Available
 - Lift: Available
 - Number of Floors (including ground floor): 9

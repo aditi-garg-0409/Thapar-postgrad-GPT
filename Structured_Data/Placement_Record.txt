@@ -1,0 +1,44 @@
+
+###Thapar University PG Placement Records (Year-wise)
+
+###Program: M.Tech Mechanical Engineering
+Year: 2023 to 2024
+Total Eligible PG Students: 19
+Number of Students Placed: 16
+Placement Percentage: approximate 84.2%
+Average Package: INR 10.15 LPA
+Highest Package: INR 21 LPA
+Top Recruiter: JP Morgan
+Other Recruiters: Tata Motors, Maruti Suzuki, L&T, Hero
+Recruitment Domains: Core Mechanical, Analytics, Consulting, Finance
+
+###Program: M.Tech (Overall icluding VLSI , Biotechnology, Civil Engineering)
+Year: 2022 to 2023
+Highest Package: INR 38 LPA
+Average Package: INR 18 LPA
+Median Package: INR 8.10 LPA (2022)
+Placement Percentage: Not specified
+Top Recruiters: Apple, Oracle, Intel, HCL Technologies, Accenture, IBM, Hero MotoCorp
+
+###Program: M.Tech in Computer Science Engineering (CSE)
+Year: 2022 to 2023
+Highest Package: INR 38 LPA
+Average Package: INR 18 LPA
+Placement Percentage: 40%
+Top Recruiters: Amazon, JP Morgan Chase & Co., Deloitte, IBM, Infosys, Microsoft
+
+###Program: MBA
+Year: 2022 to 2023
+Highest Package: INR 21 LPA
+Average Package: INR 18 LPA
+Median Package: INR 6.50 LPA (2022)
+Placement Percentage: 80%
+Top Recruiters: Deloitte, IBM, Infosys, Larsen & Toubro, Maruti Suzuki, Microsoft
+
+###Program: MCA
+Year: 2022 to 2023
+Highest Package: 19 LPA
+Average Package: 7.5 LPA
+Median Package: 5.5 LPA 
+Placement Percentage: 32%
+Top Recruiters: Axtria, Texas instruments, Deloitte,Amdocs,Airtel

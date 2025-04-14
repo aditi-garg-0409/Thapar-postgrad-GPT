@@ -1,0 +1,126 @@
+{
+  "programs": [
+    {
+      "name": "MCA",
+      "structure": {
+        "semesters": 4,
+        "mandatory_semesters": [1, 2, 3],
+        "conditional_semester_4": {
+          "condition": "CGPA < 7.0 or no internship"
+        }
+      },
+      "evaluation": {
+        "components": {
+          "quiz": 10,
+          "lab_and_project": 20,
+          "mst": "25 or 30 (depends on teacher)",
+          "est": "45 or 40 (depends on teacher)"
+        },
+        "exams": ["MST", "EST"]
+      },
+      "grading": {
+        "scale": {
+          "A+": 10.0,
+          "A": 10.0,
+          "A-": 9.0,
+          "B": 8.0,
+          "B-": 7.0,
+          "C": 6.0,
+          "C-": 5.0,
+          "E": 2.0,
+          "F": 0.0
+        },
+        "cgpa_requirement": 4.5
+      },
+      "subjects": {
+        "semester_1": [
+          "Advanced Data Structures",
+          "Data Communication and Computer Networks",
+          "Advanced Database Management Systems",
+          "Elective I", "Elective II", "Elective III", "Elective IV"
+        ],
+        "semester_2": [
+          "Advanced Algorithms",
+          "Advanced Software Engineering",
+          "Advanced Operating Systems",
+          "Elective V", "Elective VI", "Elective VII", "Elective VIII"
+        ],
+        "semester_3": [
+          "Advanced Computer Architecture",
+          "Advanced Web Technologies",
+          "Advanced Mobile Computing",
+          "Elective IX", "Elective X", "Elective XI", "Elective XII"
+        ],
+        "semester_4": [
+          "Industry Internship/Project"
+        ]
+      }
+    },
+    {
+      "name": "M.Tech Mechanical Engineering",
+      "structure": {"semesters": 4},
+      "subjects": {
+        "semester_1": [
+          "Numerical Analysis and Optimization",
+          "Instrumentation and Measurements",
+          "Experimental Stress Analysis",
+          "Metal Forming Analysis",
+          "Mechatronics and Product Design",
+          "Experimental Stress Analysis Lab",
+          "Mechanical Measurement Lab",
+          "Computational Lab"
+        ],
+        "semester_2": [
+          "Theory of Elasticity",
+          "Design of Mechanical Systems",
+          "Principles of Machine Design",
+          "Seminar",
+          "CAD/CAM Lab",
+          "Design Practical Lab"
+        ],
+        "semester_3": [
+          "Mechanical Behavior of Materials",
+          "Mechanical Vibrations",
+          "General Practical Lab",
+          "Material Behavior and Vibration Lab",
+          "Minor Project"
+        ],
+        "semester_4": [
+          "Dissertation"
+        ]
+      },
+      "electives": [
+        "Computer-Aided Design",
+        "Design of Pollution Control Equipment",
+        "Tribology",
+        "Computer-Aided Vehicle Design"
+      ],
+      "grading": {
+        "cgpa_requirement": 5.5
+      }
+    },
+    {
+      "name": "M.Tech Electronics and Communication Engineering",
+      "structure": {"semesters": 3},
+      "subjects": {
+        "semester_1": [
+          "Advanced Communication Engineering",
+          "Image and Video Processing",
+          "Information Theory and Coding",
+          "Advanced Digital Signal Processing"
+        ],
+        "semester_2": [
+          "Thesis Part I",
+          "Research Review Paper I"
+        ],
+        "semester_3": [
+          "Thesis Part II",
+          "Research Review Paper II"
+        ]
+      },
+      "grading": {
+        "cgpa_requirement": 5.5
+      }
+    }
+  ]
+}

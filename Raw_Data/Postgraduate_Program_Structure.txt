@@ -1,0 +1,120 @@
+
+### MCA
+
+**Structure**
+- Semesters: 4
+- Mandatory Semesters: 1, 2, 3
+- Conditional Semester 4: Allowed only if CGPA ≥ 7.0 **and** internship is completed.
+
+**Evaluation**
+- Components:
+  - Quiz: 10%
+  - Lab and Project: 20%
+  - MST: 25% or 30% (depends on teacher)
+  - EST: 45% or 40% (depends on teacher)
+- Exams: MST, EST
+
+**Grading**
+- Scale:
+  - A+: 10.0
+  - A: 10.0
+  - A-: 9.0
+  - B: 8.0
+  - B-: 7.0
+  - C: 6.0
+  - C-: 5.0
+  - E: 2.0
+  - F: 0.0
+- Minimum CGPA Requirement: 4.5
+
+**Subjects**
+- Semester 1:
+  - Advanced Data Structures
+  - Data Communication and Computer Networks
+  - Advanced Database Management Systems
+  - Elective I, II, III, IV
+
+- Semester 2:
+  - Advanced Algorithms
+  - Advanced Software Engineering
+  - Advanced Operating Systems
+  - Elective V, VI, VII, VIII
+
+- Semester 3:
+  - Advanced Computer Architecture
+  - Advanced Web Technologies
+  - Advanced Mobile Computing
+  - Elective IX, X, XI, XII
+
+- Semester 4:
+  - Industry Internship/Project
+
+---
+
+### M.Tech Mechanical Engineering
+
+**Structure**
+- Semesters: 4
+
+**Subjects**
+- Semester 1:
+  - Numerical Analysis and Optimization
+  - Instrumentation and Measurements
+  - Experimental Stress Analysis
+  - Metal Forming Analysis
+  - Mechatronics and Product Design
+  - Experimental Stress Analysis Lab
+  - Mechanical Measurement Lab
+  - Computational Lab
+
+- Semester 2:
+  - Theory of Elasticity
+  - Design of Mechanical Systems
+  - Principles of Machine Design
+  - Seminar
+  - CAD/CAM Lab
+  - Design Practical Lab
+
+- Semester 3:
+  - Mechanical Behavior of Materials
+  - Mechanical Vibrations
+  - General Practical Lab
+  - Material Behavior and Vibration Lab
+  - Minor Project
+
+- Semester 4:
+  - Dissertation
+
+**Electives**
+- Computer-Aided Design
+- Design of Pollution Control Equipment
+- Tribology
+- Computer-Aided Vehicle Design
+
+**Grading**
+- Minimum CGPA Requirement: 5.5
+
+---
+
+### M.Tech Electronics and Communication Engineering
+
+**Structure**
+- Semesters: 3
+
+**Subjects**
+- Semester 1:
+  - Advanced Communication Engineering
+  - Image and Video Processing
+  - Information Theory and Coding
+  - Advanced Digital Signal Processing
+
+- Semester 2:
+  - Thesis Part I
+  - Research Review Paper I
+
+- Semester 3:
+  - Thesis Part II
+  - Research Review Paper II
+
+**Grading**
+- Minimum CGPA Requirement: 5.5

@@ -1,64 +1,63 @@
-### ME/MTech
--Scholarship Type: AICTE Scholarship
+###ME/MTech - 1st Scholarship
+-Scholarship Type: Only AICTE Scholarship
 -Eligibility: GATE required
 -Amount of Scholarship: Based on AICTE approval
 -Continuation Criteria: nan
 -Special Notes: Only for AICTE-approved seats
 
 
-### ME/MTech
--Scholarship Type: TIET (with AICTE)
+###ME/MTech - 2nd Scholarship
+-Scholarship Type: TIET with AICTE
 -Eligibility: GATE required, AICTE-funded
 -Amount of Scholarship: ₹5000/month
 -Continuation Criteria: nan
 -Special Notes: Additional to AICTE
 
 
-### ME/MTech
--Scholarship Type: TIET (without AICTE)
+###ME/MTech - 3rd Scholarship
+-Scholarship Type: TIET without AICTE Support
 -Eligibility: GATE required, no AICTE funds
 -Amount of Scholarship: ₹12,400/month
 -Continuation Criteria: nan
 -Special Notes: nan
 
 
-### ME/MTech
--Scholarship Type: Non-GATE Scholarship
+###ME/MTech - 4th Scholarship
+-Scholarship Type:Only for Non-GATE aspirants
 -Eligibility: 70% marks (65% SC/ST)
 -Amount of Scholarship: ₹10,000/month (for 10 months)
 -Continuation Criteria: CGPA ≥ 8.00, No backlog
 -Special Notes: nan
 
 
-### MSc
--Scholarship Type: Merit Scholarship (Full)
--Eligibility: AGPA ≥ 8.00, No backlog
+###MSc - 1st Scholarship
+-Scholarship Type: Merit based Scholarship (Full)
+-Eligibility: AGPA(Aggregated Grading Point) is greater than 8.00 along with No backlog
 -Amount of Scholarship: Full tuition fee waiver
--Continuation Criteria: Maintain AGPA ≥ 8.00
+-Continuation Criteria: Maintain AGPA greater than 8.00
 -Special Notes: Min 5 students per discipline
 
 
-### MSc
+###MSc - 2nd Scholarship
 -Scholarship Type: Merit Scholarship (Half)
--Eligibility: AGPA ≥ 8.00, No backlog
+-Eligibility: AGPA greater than 8.00 with No backlog
 -Amount of Scholarship: 50% tuition fee waiver
--Continuation Criteria: Maintain AGPA ≥ 8.00
--Special Notes: nan
+-Continuation Criteria: Maintain AGPA greater 8.00
 
 
-### MSc
+###MSc - 3rd Scholarship
 -Scholarship Type: Merit Scholarship (Quarter)
--Eligibility: AGPA ≥ 8.00, No backlog
+-Eligibility: AGPA greater than 8.00 with No backlog
 -Amount of Scholarship: 25% tuition fee waiver
--Continuation Criteria: Maintain AGPA ≥ 8.00
+-Continuation Criteria: Maintain AGPA greater than 8.00
 -Special Notes: nan
 
 
-### MCA
--Scholarship Type: Merit Scholarship
--Eligibility: AGPA ≥ 8.00, No backlog
+###MCA - 1st Scholarship
+-Scholarship Type: Merit based Scholarship
+-Eligibility: AGPA greater than 8.00 with No backlog
 -Amount of Scholarship: ₹40,000 per year
--Continuation Criteria: Maintain AGPA ≥ 8.00
+-Continuation Criteria: Maintain AGPA greater than 8.00
 -Special Notes: 10% of admitted students
 
 
