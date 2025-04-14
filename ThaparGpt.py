@@ -87,7 +87,7 @@ class VectorDB(DataLoader):
         except Exception as e:
             print(f"\nQuery Errors:{str(e)}")
             raise
-class Falcon7B:
+class Mixtral:
     def __init__(self):
         load_dotenv()
         self.LLM = "mistralai/Mixtral-8x7B-Instruct-v0.1"
@@ -97,7 +97,7 @@ class Falcon7B:
         self.client = InferenceClient(token=self.hf_api_key)
 
     
-    def generate(self,prompt,max_new_token=250,temprature = 0.3,top_p = 0.9,reptition_penalty = 1.2):
+    def generate(self,prompt,max_new_token=300,temprature = 0.1,top_p = 0.9,reptition_penalty = 1.5):
         try:
             response = self.client.text_generation(
                 prompt=prompt,
@@ -113,11 +113,11 @@ class Falcon7B:
             raise RuntimeError("Failed to generate any respose check code.")
 
 
-class ThaparAssistant(VectorDB,Falcon7B):
+class ThaparAssistant(VectorDB,Mixtral):
     
     def __init__(self):
         VectorDB.__init__(self)
-        Falcon7B.__init__(self)
+        Mixtral.__init__(self)
         self.populate_db()
         print("\nTESTING VECTORDB QUERIES:")
         test_queries = [
@@ -137,7 +137,7 @@ class ThaparAssistant(VectorDB,Falcon7B):
         
     def _determineCollectionType(self,query):
         query_lower =query.lower()
-        if any(kw in query_lower for kw in ["hostel","room","mess","sharing","hall"]):
+        if any(kw in query_lower for kw in ["hostel","room","mess","sharing","hall","accomodation"]):
             return "hostels"
         elif any(kw in query_lower for kw in ["scholarships","fee","course","syllabus","program"]):
             return "academics"
@@ -193,7 +193,7 @@ Answer: """
 
 assistant = ThaparAssistant()
 queries = [
-        "What are the Boys hostels available in Thapar University?",
+        "List all boys hostels?",
         "What is the mess fee for agira hall ?",
         "Which coding-related societies exist?",
         "Tell me various events that occur in Thapar?",
