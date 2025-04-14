@@ -72,9 +72,9 @@ class VectorDB(DataLoader):
                 metadatas =[{"source":filename}]*len(chunks)
             )
         # After populate_db(), add verification:
-        print("Collection counts:")
-        for name, col in self.collections.items():
-            print(f"{name}: {col.count()} items")
+        # print("Collection counts:")
+        # for name, col in self.collections.items():
+        #     print(f"{name}: {col.count()} items")
     
     def query(self,query,collection_type,top_k=3):
         try:
@@ -119,21 +119,21 @@ class ThaparAssistant(VectorDB,Mixtral):
         VectorDB.__init__(self)
         Mixtral.__init__(self)
         self.populate_db()
-        print("\nTESTING VECTORDB QUERIES:")
-        test_queries = [
-            ("hostel fees", "hostels"),
-            ("coding society", "activities"),
-            ("scholarship", "academics"),
-            ("recruiters","placements")
-        ]
+        # print("\nTESTING VECTORDB QUERIES:")
+        # test_queries = [
+        #     ("hostel fees", "hostels"),
+        #     ("coding society", "activities"),
+        #     ("scholarship", "academics"),
+        #     ("recruiters","placements")
+        # ]
         
-        for query, col_type in test_queries:
-            try:
-                results = self.query(query, col_type)
-                print(f"\nQuery: '{query}'")
-                print(f"Results: {results}")
-            except Exception as e:
-                print(f"Query failed: {str(e)}")
+        # for query, col_type in test_queries:
+        #     try:
+        #         results = self.query(query, col_type)
+        #         print(f"\nQuery: '{query}'")
+        #         print(f"Results: {results}")
+        #     except Exception as e:
+        #         print(f"Query failed: {str(e)}")
         
     def _determineCollectionType(self,query):
         query_lower =query.lower()
