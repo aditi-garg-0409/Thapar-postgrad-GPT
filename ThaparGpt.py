@@ -3,7 +3,7 @@ import chromadb
 from chromadb import EmbeddingFunction
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
-from huggingface_hub import InferenceClient
+import ollama  # Changed from huggingface_hub import InferenceClient
 
 
 class DataLoader:
@@ -71,10 +71,6 @@ class VectorDB(DataLoader):
                 ids = [f"{filename}_{i}" for i in range(len(chunks))],
                 metadatas =[{"source":filename}]*len(chunks)
             )
-        # After populate_db(), add verification:
-        # print("Collection counts:")
-        # for name, col in self.collections.items():
-        #     print(f"{name}: {col.count()} items")
     
     def query(self,query,collection_type,top_k=3):
         try:
@@ -87,53 +83,36 @@ class VectorDB(DataLoader):
         except Exception as e:
             print(f"\nQuery Errors:{str(e)}")
             raise
+
 class Mixtral:
     def __init__(self):
         load_dotenv()
-        self.LLM = "mistralai/Mixtral-8x7B-Instruct-v0.1"
-        self.hf_api_key = os.getenv("HUGGINGFACE_API_KEY")
-        if not self.hf_api_key :
-            raise ValueError("Check .env file as api key not found")
-        self.client = InferenceClient(token=self.hf_api_key)
-
+        self.LLM = "mistral"  # Changed to Ollama's model name
+        # No API key needed for Ollama local setup
+        self.client = ollama  # Using ollama directly
     
-    def generate(self,prompt,max_new_token=300,temprature = 0.1,top_p = 0.9,reptition_penalty = 1.5):
+    def generate(self, prompt, max_new_token=300, temperature=0.1, top_p=0.9):
         try:
-            response = self.client.text_generation(
-                prompt=prompt,
+            response = self.client.generate(
                 model=self.LLM,
-                max_new_tokens= max_new_token,
-                temperature= temprature,
-                top_p=top_p,
-                repetition_penalty=reptition_penalty,
-                do_sample=True
+                prompt=prompt,
+                options={
+                    'num_predict': max_new_token,
+                    'temperature': temperature,
+                    'top_p': top_p
+                }
             )
-            return response.strip()
+            return response['response'].strip()
         except Exception as e:
-            raise RuntimeError("Failed to generate any respose check code.")
+            print(f"Mixtral Generation Error: {str(e)}")
+            raise RuntimeError("Failed to generate any response. Check the Ollama setup.")
 
-
-class ThaparAssistant(VectorDB,Mixtral):
+class ThaparAssistant(VectorDB, Mixtral):
     
     def __init__(self):
         VectorDB.__init__(self)
         Mixtral.__init__(self)
         self.populate_db()
-        # print("\nTESTING VECTORDB QUERIES:")
-        # test_queries = [
-        #     ("hostel fees", "hostels"),
-        #     ("coding society", "activities"),
-        #     ("scholarship", "academics"),
-        #     ("recruiters","placements")
-        # ]
-        
-        # for query, col_type in test_queries:
-        #     try:
-        #         results = self.query(query, col_type)
-        #         print(f"\nQuery: '{query}'")
-        #         print(f"Results: {results}")
-        #     except Exception as e:
-        #         print(f"Query failed: {str(e)}")
         
     def _determineCollectionType(self,query):
         query_lower =query.lower()
@@ -145,34 +124,39 @@ class ThaparAssistant(VectorDB,Mixtral):
             return "placements"
         else:
             return "activities"
+            
     def build_prompt(self, query, context):
         context_str = "\n\n".join([
             f"CONTEXT {i+1}:\n{text}" 
             for i, text in enumerate(context)
-            ])
-        return f"""You are a factual assistant for Thapar University, and you must ONLY use the provided context to answer.
-Rules:
+        ])
+        return f"""You are a helpful assistant for Thapar University with two response modes:
 
-Respond in EXACTLY ONE SENTENCE.
+# When context exists:
+1. STRICTLY prioritize the provided official context
+2. Use exact figures/terms (₹ instead of Rs/INR)
+3. Format lists with bullet points
+4. For numerical queries, provide exact values only
+5. Never hallucinate details - say "Not specified in official records" if unsure
 
-1.If the answer isn`t in the context, say: 'Information not found in official records.'
+# For general queries:
+1. Use your knowledge about Indian universities
+2. Clearly mark non-context answers with [General Knowledge]
+3. For comparisons, maintain neutrality
+4. When estimating, disclose it's an approximation
 
-2.Use only exact numbers, terms, and currency (₹) from the context—no approximations.
-
-3.Never add, infer, or invent details—strictly verbatim from context.
-
-4.If the query is irrelevant or unanswerable, respond: 'Information not found in official records.'
-
-5.Preserve formatting (e.g., ₹, dates, names) exactly as provided use ₹ instead of $ or Rs. or INR .
-
-6. Replace synonyms.
-
-Context:
-{context_str}
+Current Context:
+{context_str if context else 'No specific context provided'}
 
 User Question: {query}
 
-Answer: """
+First determine if this is:
+A) A specific factual query about Thapar (use context)
+B) A general higher-education question (wider knowledge)
+C) Administrative (dates/processes - be precise)
+
+Then provide a 1-2 sentence response accordingly, using the format:
+[Response Type]: [Your answer]"""
     
     def ask(self, query):
         try:
@@ -189,21 +173,18 @@ Answer: """
         except Exception as e:
             return f"System error: {str(e)}"
 
-
-
 assistant = ThaparAssistant()
 queries = [
-        "List all boys hostels?",
+        "List all hostels in Thapar?",
         "What is the mess fee for agira hall ?",
         "Which coding-related societies exist?",
         "Tell me various events that occur in Thapar?",
         "What is the average package for MTECH CSE in Thapar?",
         "Who are the top recruiters for MCA?",
-        "Tell me about MSc scholarships for 8.5 CGPA students"
+        "Tell me about MSc scholarships for 8.5 CGPA students",
+        "What are various computer science societies in IIT Bombay"
 ]
-
 
 for query in queries:
     print(f"\n{query}")
     print(f"\n{assistant.ask(query)}")
-
