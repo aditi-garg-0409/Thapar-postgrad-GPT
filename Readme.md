@@ -12,7 +12,7 @@ A Retrieval-Augmented Generation (RAG) system designed to answer queries about T
   - University events
 
 - **Technical Stack**:
-  - 🧠 **LLM**: Mixtral (Hugging Face API)
+  - 🧠 **LLM**: Mistral (Ollama)
   - 🗄️ **VectorDB**: ChromaDB
   - 🔍 **Embeddings**: all-MiniLM-L6-v2
   - 🐍 **Backend**: Python 3.9+
