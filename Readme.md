@@ -27,7 +27,7 @@ A Retrieval-Augmented Generation (RAG) system designed to answer queries about T
    ``` bash
    pip install chromadb
    pip install dotenv
-   pip install huggingface_hub
+   pip install ollama
    pip install sentence_transformers
 3. Data Preparation 
    Convert all the .xlsx file into .txt file
