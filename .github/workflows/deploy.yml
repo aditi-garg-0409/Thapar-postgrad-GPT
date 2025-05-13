@@ -33,7 +33,8 @@ jobs:
       - name: Build app
         run: |
           cd Web/thapargpt-frontend
-          npm run build
+          npm run build -- --base-href=/ThaparEnv/
+          touch build/.nojekyll
           
       - name: Verify build
         run: ls -la Web/thapargpt-frontend/build
