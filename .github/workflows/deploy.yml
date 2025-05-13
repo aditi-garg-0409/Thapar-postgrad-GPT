@@ -2,37 +2,47 @@ name: Deploy React App to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
+# Add these permissions at the top level (not under jobs)
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
+      - uses: actions/checkout@v3
+      
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
-
+          
       - name: Install dependencies
         run: |
-          cd ./Web/thapargpt-frontend   # Ensure this folder exists
+          cd Web/thapargpt-frontend
           npm install
-
+          
       - name: Build app
         run: |
-          cd ./Web/thapargpt-frontend   # Ensure this folder exists
-          npm run build
-
+          cd Web/thapargpt-frontend
+          CI=false npm run build
+          ls -la build/static/js/
+          touch build/.nojekyll
+          
+      - name: Verify build
+        run: ls -la Web/thapargpt-frontend/build
+          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: Web/thapargpt-frontend/build   # Ensure this folder exists
+           github_token: ${{ secrets.GITHUB_TOKEN }}
+           publish_dir: Web/thapargpt-frontend/build
+           destination_dir: Web/thapargpt-frontend
