@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
     return (
-        <Router>
+        <Router basename="/Web/thapargpt-frontend">
             <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/login" element={<Login />} />
