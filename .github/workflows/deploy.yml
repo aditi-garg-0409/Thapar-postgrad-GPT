@@ -3,7 +3,10 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
@@ -11,23 +14,25 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
-        run: npm install
-        working-directory: ./Web/thapargpt-frontend
+        run: |
+          cd Web/thapargpt-frontend   # Ensure this folder exists
+          npm install
 
-      - name: Build
-        run: npm run build
-        working-directory: ./Web/thapargpt-frontend
+      - name: Build app
+        run: |
+          cd eb/thapargpt-frontend   # Ensure this folder exists
+          npm run build
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./Web/thapargpt-frontend/build
+          publish_dir: Web/thapargpt-frontend/build   # Ensure this folder exists
