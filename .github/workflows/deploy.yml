@@ -4,9 +4,19 @@ on:
   push:
     branches: [main]
 
+# Add these permissions at the top level (not under jobs)
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     steps:
       - uses: actions/checkout@v3
       
@@ -25,11 +35,8 @@ jobs:
           cd Web/thapargpt-frontend
           npm run build
           
-      - name: Verify build exists
-        run: |
-          ls -la Web/thapargpt-frontend/build
-          echo "Build files:"
-          ls Web/thapargpt-frontend/build
+      - name: Verify build
+        run: ls -la Web/thapargpt-frontend/build
           
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -37,4 +44,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: Web/thapargpt-frontend/build
           branch: gh-pages
-          keep_files: true  # Important - preserves existing files
