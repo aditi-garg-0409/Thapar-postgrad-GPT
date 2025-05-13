@@ -1,6 +1,6 @@
 # Thapar PG Student Assistant
 
-A Retrieval-Augmented Generation (RAG) system designed to answer queries about Thapar University's PG programs, hostels, scholarships, and student activities using Falcon-7B and ChromaDB.
+A Retrieval-Augmented Generation (RAG) system designed to answer queries about Thapar University's PG programs, hostels, scholarships, and student activities using Mistral-7B and ChromaDB.
 
 ## Features
 
@@ -27,7 +27,7 @@ A Retrieval-Augmented Generation (RAG) system designed to answer queries about T
    ``` bash
    pip install chromadb
    pip install dotenv
-   pip install huggingface_hub
+   pip install ollama
    pip install sentence_transformers
 3. Data Preparation 
    Convert all the .xlsx file into .txt file
