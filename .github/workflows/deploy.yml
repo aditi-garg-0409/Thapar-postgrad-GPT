@@ -28,7 +28,7 @@ jobs:
 
       - name: Build app
         run: |
-          cd eb/thapargpt-frontend   # Ensure this folder exists
+          cd Web/thapargpt-frontend   # Ensure this folder exists
           npm run build
 
       - name: Deploy to GitHub Pages
