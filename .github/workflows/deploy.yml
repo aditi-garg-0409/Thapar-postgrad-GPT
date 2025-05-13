@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd web/thapargpt-frontend
+          cd Web/thapargpt-frontend
           npm ci
 
       - name: Build React app
