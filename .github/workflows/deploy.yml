@@ -33,8 +33,12 @@ jobs:
       - name: Build app
         run: |
           cd Web/thapargpt-frontend
+<<<<<<< HEAD
           CI=false npm run build
           ls -la build/static/js/
+=======
+          npm run build -- --base-href=/ThaparEnv/
+>>>>>>> 3c7e6aff00af8591ae4954d0e1da9efcc8f48693
           touch build/.nojekyll
           
       - name: Verify build
@@ -45,4 +49,8 @@ jobs:
         with:
            github_token: ${{ secrets.GITHUB_TOKEN }}
            publish_dir: Web/thapargpt-frontend/build
+<<<<<<< HEAD
            destination_dir: Web/thapargpt-frontend
+=======
+           destination_dir: Web/thapargpt-frontend
+>>>>>>> 3c7e6aff00af8591ae4954d0e1da9efcc8f48693
