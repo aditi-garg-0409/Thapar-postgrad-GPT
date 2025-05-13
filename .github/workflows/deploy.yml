@@ -2,42 +2,39 @@ name: Deploy React App to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
-
-permissions:
-  contents: write
+    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
+      - uses: actions/checkout@v3
+      
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
-
+          
       - name: Install dependencies
         run: |
-          cd ./Web/thapargpt-frontend   # Ensure this folder exists
+          cd Web/thapargpt-frontend
           npm install
-
+          
       - name: Build app
         run: |
-          cd ./Web/thapargpt-frontend   # Ensure this folder exists
+          cd Web/thapargpt-frontend
           npm run build
           
-      - name: Verify build folder
-        run: ls -la Web/thapargpt-frontend/build
-
+      - name: Verify build exists
+        run: |
+          ls -la Web/thapargpt-frontend/build
+          echo "Build files:"
+          ls Web/thapargpt-frontend/build
+          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: Web/thapargpt-frontend/build   # Ensure this folder exists
+          publish_dir: Web/thapargpt-frontend/build
           branch: gh-pages
-          destination_dir: Web/thapargpt-frontend
+          keep_files: true  # Important - preserves existing files
