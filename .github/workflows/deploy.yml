@@ -35,4 +35,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: Web/thapargpt-frontend/build   # Ensure this folder exists
