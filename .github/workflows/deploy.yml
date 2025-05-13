@@ -32,7 +32,7 @@ jobs:
           npm run build
           
       - name: Verify build folder
-        run: ls -la WEB/thapargpt-frontend/build
+        run: ls -la Web/thapargpt-frontend/build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
