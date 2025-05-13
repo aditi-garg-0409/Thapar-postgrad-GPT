@@ -40,4 +40,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: Web/thapargpt-frontend/build   # Ensure this folder exists
           branch: gh-pages
-          destination_dir: thapargpt-frontend
+          destination_dir: Web/thapargpt-frontend
