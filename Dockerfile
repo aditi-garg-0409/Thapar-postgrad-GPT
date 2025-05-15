@@ -21,10 +21,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose Flask default port
-EXPOSE 5000
+EXPOSE 8080
 
 # Set environment variable
-ENV PORT=5000
+ENV PORT=8080
 
 # Run the app
 CMD ["python", "./ThaparGpt2.py"]
