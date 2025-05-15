@@ -22,5 +22,6 @@ COPY . .
 
 # Expose the port the app runs on
 
-CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT:-8080} ThaparGpt2:app"]
+CMD sh -c "gunicorn --bind 0.0.0.0:${PORT:-8080} ThaparGpt2:app"
+
 
