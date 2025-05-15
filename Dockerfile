@@ -27,6 +27,6 @@ EXPOSE 8080
 ENV PORT=8080
 
 # Run the app
-CMD ["python", "./ThaparGpt2.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "ThaparGpt2:app"]
 
 

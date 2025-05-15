@@ -3,4 +3,5 @@ flask
 flask_cors
 dotenv
 cohere
+gunicorn
 # sentence_transformers
