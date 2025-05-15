@@ -27,4 +27,5 @@ EXPOSE 5000
 ENV PORT=5000
 
 # Run the app
-CMD ["python", "./ThparGpt2.py"]
+CMD ["ls", "-R", "/app"]
+
