@@ -19,7 +19,7 @@ class DataLoader:
         data = {}
         for filename in os.listdir(self.data_dir):
             if filename.endswith('.txt'):
-                with open(os.path.join(self.data_dir,filename),'r') as f:
+                with open(os.path.join(self.data_dir,filename),'r',encoding="utf-8",errors="ignore") as f:
                     data[filename]=f.read()
         return data
 
