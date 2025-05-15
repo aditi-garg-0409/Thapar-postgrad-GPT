@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 # import ollama
 from flask import Flask, request, jsonify   
-from pyngrok import ngrok
+# from pyngrok import ngrok
 from flask_cors import CORS
 # import threading
 import json
