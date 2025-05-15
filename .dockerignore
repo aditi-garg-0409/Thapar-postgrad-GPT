@@ -2,3 +2,10 @@ __pycache__/
 *.pyc
 .chroma/
 Raw_Data/
+*.pkl
+*.ipynb
+.vscode/
+*.log
+.env
+*.pdf
+*.csv
