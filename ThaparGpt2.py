@@ -8,7 +8,8 @@ from flask import Flask, request, jsonify
 # from pyngrok import ngrok
 from flask_cors import CORS
 # import threading
-import json
+import cohere
+
 
 
 class DataLoader:
@@ -21,13 +22,48 @@ class DataLoader:
                 with open(os.path.join(self.data_dir,filename),'r') as f:
                     data[filename]=f.read()
         return data
+
+
 class EmbeddingModel:
     def __init__(self):
-        self.model = SentenceTransformer("all-MiniLM-L6-v2")
-    def embed(self,txt):
+        load_dotenv()
+        self.api_key = os.getenv("COHERE_API_KEY")
+        self.use_cohere = self.api_key is not None
+        self.cohere_client = None
+        
+        if self.use_cohere:
+            try:
+                self.cohere_client = cohere.Client(self.api_key)
+                # Test the API to ensure it's working
+                self.cohere_client.embed(texts=["test"], model="embed-english-v3.0")
+                print("[EmbeddingModel] Using Cohere API for embeddings.")
+            except Exception as e:
+                print(f"[EmbeddingModel] Failed to use Cohere API. Falling back to local model. Reason: {str(e)}")
+                self._load_local_model()
+        else:
+            print("[EmbeddingModel] COHERE_API_KEY not found. Using local model.")
+            self._load_local_model()
+
+    def _load_local_model(self):
+        self.use_cohere = False
+        self.local_model = SentenceTransformer("intfloat/e5-small-v2")
+
+    def embed(self, txt):
         if isinstance(txt, str):
             txt = [txt]
-        return self.model.encode(txt)
+        try:
+            if self.use_cohere and self.cohere_client:
+                response = self.cohere_client.embed(
+                    texts=txt,
+                    model="embed-english-v3.0"
+                )
+                return response.embeddings
+            else:
+                return self.local_model.encode(txt)
+        except Exception as e:
+            print(f"[EmbeddingModel] Error during embedding. Fallback to local. Error: {str(e)}")
+            return self.local_model.encode(txt)
+
 
 class VectorDB(DataLoader):
     def __init__(self):
@@ -94,7 +130,7 @@ import requests
 class Mixtral:
     def __init__(self):
         load_dotenv()
-        self.GROQ_API_KEY = "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"
+        self.GROQ_API_KEY = os.getenv("GROQ_API_KEY")
         self.api_url = "https://api.groq.com/openai/v1/chat/completions"
         self.headers = {
             "Authorization": f"Bearer {self.GROQ_API_KEY}",
