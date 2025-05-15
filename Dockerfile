@@ -20,13 +20,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the entire app
 COPY . .
 
-# Expose Flask default port
-EXPOSE 8080
+# Expose the port the app runs on
 
-# Set environment variable
-ENV PORT=8080
-
-# Run the app
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "ThaparGpt2:app"]
-
+CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT:-8080} ThaparGpt2:app"]
 
