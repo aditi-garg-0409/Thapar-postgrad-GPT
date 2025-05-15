@@ -238,27 +238,25 @@ app = Flask(__name__)
 CORS(app)
 
 
-print("Flask app Starting.....")
-try:
-    assistant = ThaparAssistant()
-    print("✅Thapar Assistant Initialized")
-except Exception as e:
-    print("❌Failed to Initialize assistant",str(e))
-    assistant=None
 
+assistant = None
 @app.route('/api/ask', methods=['POST','OPTIONS'])
 def api_ask():
+    global assistant
+
+    if assistant is None:
+        print("🌀 Initializing ThaparAssistant on first request...")
+        assistant = ThaparAssistant()
+
     if request.method == "OPTIONS":
-        return jsonify({
-            'status':'ok'
-        })
-        
+        return jsonify({'status': 'ok'})
+
     if not request.json or 'query' not in request.json:
         return jsonify({'error': 'Query parameter is required'}), 400
-    
+
     query = request.json['query']
     response = assistant.ask(query)
-    
+
     return jsonify({
         'query': query,
         'response': response
