@@ -2,7 +2,7 @@ import os
 import chromadb
 from chromadb import EmbeddingFunction
 from dotenv import load_dotenv
-# from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer
 # import ollama
 from flask import Flask, request, jsonify   
 # from pyngrok import ngrok

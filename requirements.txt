@@ -2,3 +2,5 @@ chromadb
 flask
 flask_cors
 dotenv
+cohere
+sentence_transformers
