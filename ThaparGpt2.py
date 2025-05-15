@@ -268,6 +268,9 @@ def health_check():
         'status': 'ok',
         'message': 'Thapar Assistant API is running'
     })
+    
+print("✅ End of ThaparGpt2.py script reached.")
+
 
 # def start_ngrok():
 #     # Start ngrok tunnel
@@ -282,11 +285,11 @@ def health_check():
 #     except Exception as e:
 #         print(f"Error starting ngrok tunnel: {str(e)}")
 
-if __name__ == "__main__":
-    # Start ngrok in a separate thread
-    # threading.Thread(target=start_ngrok, daemon=True).start()
+# if __name__ == "__main__":
+#     # Start ngrok in a separate thread
+#     # threading.Thread(target=start_ngrok, daemon=True).start()
     
-    # Start Flask app
-    print("Starting Thapar Assistant API...")
-    port =int(os.environ.get("PORT",8080))
-    app.run(host="0.0.0.0", port=port)
+#     # Start Flask app
+#     print("Starting Thapar Assistant API...")
+#     port =int(os.environ.get("PORT",8080))
+#     # app.run(host="0.0.0.0", port=port)
