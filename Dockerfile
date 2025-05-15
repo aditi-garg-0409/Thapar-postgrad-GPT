@@ -27,5 +27,6 @@ EXPOSE 5000
 ENV PORT=5000
 
 # Run the app
-CMD ["ls", "-R", "/app"]
+CMD ["python", "./ThaparGpt2.py"]
+
 
