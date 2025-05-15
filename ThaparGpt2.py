@@ -49,21 +49,24 @@ class EmbeddingModel:
         self.local_model = SentenceTransformer("intfloat/e5-small-v2")
 
     def embed(self, txt):
-        if isinstance(txt, str):
-            txt = [txt]
         try:
-            if self.use_cohere and self.cohere_client:
-                response = self.cohere_client.embed(
-                    texts=txt,
-                    model="embed-english-v3.0"
-                )
-                return response.embeddings
-            else:
-                return self.local_model.encode(txt)
+            print("[EmbeddingModel] Using Cohere API for embeddings.")
+            if isinstance(txt, str):
+                txt = [txt]
+            response = self.cohere_client.embed(
+                texts=txt,
+                model="embed-english-v3.0",
+                input_type="search_document"  # Required for this model
+            )
+            return response.embeddings
         except Exception as e:
-            print(f"[EmbeddingModel] Error during embedding. Fallback to local. Error: {str(e)}")
-            return self.local_model.encode(txt)
-
+            print(f"[EmbeddingModel] Error during embedding. Fallback to local. Error: {e}")
+        
+        # Lazy load local model
+        if not hasattr(self, "local_model"):
+            from sentence_transformers import SentenceTransformer
+            self.local_model = SentenceTransformer("all-MiniLM-L6-v2")
+        return self.local_model.encode(txt)
 
 class VectorDB(DataLoader):
     def __init__(self):
