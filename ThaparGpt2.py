@@ -234,8 +234,8 @@ Then provide a 1-2 sentence response accordingly, using the format:
 
 # Create Flask app to serve the assistant
 app = Flask(__name__)
-# CORS(app,origins=["https://thapargptweb.onrender.com"],supports_credentials=True,headers=["Content-Type"])
-CORS(app)
+CORS(app,origins=["https://thapargptweb.onrender.com"],supports_credentials=True,headers=["Content-Type"])
+# CORS(app)
 
 
 
