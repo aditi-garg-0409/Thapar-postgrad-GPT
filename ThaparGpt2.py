@@ -3,11 +3,11 @@ import chromadb
 from chromadb import EmbeddingFunction
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
-import ollama
+# import ollama
 from flask import Flask, request, jsonify   
 from pyngrok import ngrok
 from flask_cors import CORS
-import threading
+# import threading
 import json
 
 
@@ -32,7 +32,7 @@ class EmbeddingModel:
 class VectorDB(DataLoader):
     def __init__(self):
         super().__init__()
-        self.client = chromadb.PersistentClient()
+        self.client = chromadb.Client()
         self.embedder = EmbeddingModel()
         self.collections = {}
         for collection_name in ["thapar_hostels", "thapar_academics", "thapar_activities","thapar_placements"]:
@@ -89,28 +89,40 @@ class VectorDB(DataLoader):
             print(f"\nQuery Errors:{str(e)}")
             raise
 
+import requests
+
 class Mixtral:
     def __init__(self):
         load_dotenv()
-        self.LLM = "mistral"  # Changed to Ollama's model name
-        # No API key needed for Ollama local setup
-        self.client = ollama  # Using ollama directly
-    
+        self.GROQ_API_KEY = "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"
+        self.api_url = "https://api.groq.com/openai/v1/chat/completions"
+        self.headers = {
+            "Authorization": f"Bearer {self.GROQ_API_KEY}",
+            "Content-Type": "application/json"
+        }
+
     def generate(self, prompt, max_new_token=500, temperature=0.1, top_p=0.9):
         try:
-            response = self.client.generate(
-                model=self.LLM,
-                prompt=prompt,
-                options={
-                    'num_predict': max_new_token,
-                    'temperature': temperature,
-                    'top_p': top_p
-                }
+            payload = {
+                "model": "mistral-saba-24b",
+                "messages": [
+                    {"role": "system", "content": "You are ThaparGPT. Answer like a helpful university assistant."},
+                    {"role": "user", "content": prompt}
+                ],
+                "temperature": temperature,
+                "top_p": top_p,
+                "max_tokens": max_new_token
+            }
+
+            response = requests.post(
+                self.api_url, headers=self.headers, json=payload, timeout=10
             )
-            return response['response'].strip()
+            response.raise_for_status()
+            return response.json()["choices"][0]["message"]["content"].strip()
+
         except Exception as e:
-            print(f"Mixtral Generation Error: {str(e)}")
-            raise RuntimeError("Failed to generate any response. Check the Ollama setup.")
+            print(f"[Groq API ERROR]: {str(e)}")
+            raise RuntimeError("Groq API call failed. Check your API key or prompt formatting.")
 
 class ThaparAssistant(VectorDB, Mixtral):
     
@@ -183,6 +195,7 @@ Then provide a 1-2 sentence response accordingly, using the format:
 
 # Create Flask app to serve the assistant
 app = Flask(__name__)
+# CORS(app,origins=["https://thapargptweb.onrender.com"],supports_credentials=True,headers=["Content-Type"])
 CORS(app)
 assistant = ThaparAssistant()
 
@@ -211,23 +224,24 @@ def health_check():
         'message': 'Thapar Assistant API is running'
     })
 
-def start_ngrok():
-    # Start ngrok tunnel
-    try:
-        # Free ngrok connections time out after a while, so consider checking the active tunnels
-        # and reconnecting if needed in a production environment
-        http_tunnel = ngrok.connect(5000)
-        public_url = http_tunnel.public_url
-        print(f"\n* Ngrok tunnel established at: {public_url}")
-        print(f"* API endpoint available at: {public_url}/api/ask")
-        print("* Send POST requests with JSON payload: {\"query\": \"your question here\"}")
-    except Exception as e:
-        print(f"Error starting ngrok tunnel: {str(e)}")
+# def start_ngrok():
+#     # Start ngrok tunnel
+#     try:
+#         # Free ngrok connections time out after a while, so consider checking the active tunnels
+#         # and reconnecting if needed in a production environment
+#         http_tunnel = ngrok.connect(5000)
+#         public_url = http_tunnel.public_url
+#         print(f"\n* Ngrok tunnel established at: {public_url}")
+#         print(f"* API endpoint available at: {public_url}/api/ask")
+#         print("* Send POST requests with JSON payload: {\"query\": \"your question here\"}")
+#     except Exception as e:
+#         print(f"Error starting ngrok tunnel: {str(e)}")
 
 if __name__ == "__main__":
     # Start ngrok in a separate thread
-    threading.Thread(target=start_ngrok, daemon=True).start()
+    # threading.Thread(target=start_ngrok, daemon=True).start()
     
     # Start Flask app
     print("Starting Thapar Assistant API...")
-    app.run(host="0.0.0.0", port=5000)
+    port =int(os.environ.get("PORT",5000))
+    app.run(host="0.0.0.0", port=port)
