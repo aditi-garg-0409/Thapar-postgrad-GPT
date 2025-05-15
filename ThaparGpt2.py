@@ -120,7 +120,7 @@ class VectorDB(DataLoader):
         try:
             query_embeddings = self.embedder.embed([query])
             results = self.collections[collection_type].query(
-                query_embeddings = query_embeddings.tolist(),
+                query_embeddings = query_embeddings,
                 n_results = top_k
             )
             return results["documents"][0]
