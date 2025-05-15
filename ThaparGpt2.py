@@ -236,7 +236,15 @@ Then provide a 1-2 sentence response accordingly, using the format:
 app = Flask(__name__)
 # CORS(app,origins=["https://thapargptweb.onrender.com"],supports_credentials=True,headers=["Content-Type"])
 CORS(app)
-assistant = ThaparAssistant()
+
+
+print("Flask app Starting.....")
+try:
+    assistant = ThaparAssistant()
+    print("✅Thapar Assistant Initialized")
+except Exception as e:
+    print("❌Failed to Initialize assistant",str(e))
+    assistant=None
 
 @app.route('/api/ask', methods=['POST','OPTIONS'])
 def api_ask():
