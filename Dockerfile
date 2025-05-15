@@ -1,8 +1,6 @@
 # Use the smallest Python image
 FROM python:3.10-slim
 
-# Set working directory
-WORKDIR /app
 
 # Install only necessary system packages
 RUN apt-get update && apt-get install -y \
