@@ -35,7 +35,7 @@ class EmbeddingModel:
             try:
                 self.cohere_client = cohere.Client(self.api_key)
                 # Test the API to ensure it's working
-                self.cohere_client.embed(texts=["test"], model="embed-english-v3.0")
+                self.cohere_client.embed(texts=["test"], model="embed-english-v3.0",input_type="search_document")
                 print("[EmbeddingModel] Using Cohere API for embeddings.")
             except Exception as e:
                 print(f"[EmbeddingModel] Failed to use Cohere API. Falling back to local model. Reason: {str(e)}")
