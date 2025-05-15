@@ -3,4 +3,4 @@ flask
 flask_cors
 dotenv
 cohere
-sentence_transformers
+# sentence_transformers
