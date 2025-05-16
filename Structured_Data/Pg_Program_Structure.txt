@@ -1,12 +1,12 @@
 
 ### MCA
 
-**Structure**
+- Structure
 - Semesters: 4
 - Mandatory Semesters: 1, 2, 3
-- Conditional Semester 4: Allowed only if CGPA ≥ 7.0 **and** internship is completed.
+- Conditional Semester 4: Allowed only if CGPA ≥ 7.0 and internship is completed.
 
-**Evaluation**
+- Evaluation
 - Components:
   - Quiz: 10%
   - Lab and Project: 20%
@@ -14,7 +14,7 @@
   - EST: 45% or 40% (depends on teacher)
 - Exams: MST, EST
 
-**Grading**
+- Grading
 - Scale:
   - A+: 10.0
   - A: 10.0
@@ -27,7 +27,7 @@
   - F: 0.0
 - Minimum CGPA Requirement: 4.5
 
-**Subjects**
+- Subjects
 - Semester 1:
   - Advanced Data Structures
   - Data Communication and Computer Networks
@@ -51,12 +51,9 @@
 
 ---
 
-### M.Tech Mechanical Engineering
-
-**Structure**
+### M.Tech Mechanical Engineering Structure
 - Semesters: 4
-
-**Subjects**
+- Subjects
 - Semester 1:
   - Numerical Analysis and Optimization
   - Instrumentation and Measurements
@@ -84,8 +81,7 @@
 
 - Semester 4:
   - Dissertation
-
-**Electives**
+- Electives
 - Computer-Aided Design
 - Design of Pollution Control Equipment
 - Tribology
@@ -98,10 +94,10 @@
 
 ### M.Tech Electronics and Communication Engineering
 
-**Structure**
+- Structure
 - Semesters: 3
 
-**Subjects**
+- Subjects
 - Semester 1:
   - Advanced Communication Engineering
   - Image and Video Processing
@@ -116,5 +112,5 @@
   - Thesis Part II
   - Research Review Paper II
 
-**Grading**
+- Grading
 - Minimum CGPA Requirement: 5.5

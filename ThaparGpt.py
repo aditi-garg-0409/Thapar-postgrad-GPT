@@ -2,8 +2,14 @@ import os
 import chromadb
 from chromadb import EmbeddingFunction
 from dotenv import load_dotenv
-from sentence_transformers import SentenceTransformer
-import ollama  # Changed from huggingface_hub import InferenceClient
+# from sentence_transformers import SentenceTransformer
+# import ollama
+from flask import Flask, request, jsonify   
+# from pyngrok import ngrok
+from flask_cors import CORS
+# import threading
+import cohere
+
 
 
 class DataLoader:
@@ -13,24 +19,62 @@ class DataLoader:
         data = {}
         for filename in os.listdir(self.data_dir):
             if filename.endswith('.txt'):
-                with open(os.path.join(self.data_dir,filename),'r') as f:
+                with open(os.path.join(self.data_dir,filename),'r',encoding="utf-8",errors="ignore") as f:
                     data[filename]=f.read()
         return data
+
+
 class EmbeddingModel:
     def __init__(self):
-        self.model = SentenceTransformer("all-MiniLM-L6-v2")
-    def embed(self,txt):
-        if isinstance(txt, str):
-            txt = [txt]
-        return self.model.encode(txt)
+        load_dotenv()
+        self.api_key = os.getenv("COHERE_API_KEY")
+        self.use_cohere = self.api_key is not None
+        self.cohere_client = None
+        
+        if self.use_cohere:
+            try:
+                self.cohere_client = cohere.Client(self.api_key)
+                # Test the API to ensure it's working
+                self.cohere_client.embed(texts=["test"], model="embed-english-v3.0",input_type="search_document")
+                print("[EmbeddingModel] Using Cohere API for embeddings.")
+            except Exception as e:
+                print(f"[EmbeddingModel] Failed to use Cohere API. Falling back to local model. Reason: {str(e)}")
+                self._load_local_model()
+        else:
+            print("[EmbeddingModel] COHERE_API_KEY not found. Using local model.")
+            self._load_local_model()
+
+    def _load_local_model(self):
+        self.use_cohere = False
+        self.local_model = SentenceTransformer("intfloat/e5-small-v2")
+
+    def embed(self, txt):
+        try:
+            print("[EmbeddingModel] Using Cohere API for embeddings.")
+            if isinstance(txt, str):
+                txt = [txt]
+            response = self.cohere_client.embed(
+                texts=txt,
+                model="embed-english-v3.0",
+                input_type="search_document"  # Required for this model
+            )
+            return response.embeddings
+        except Exception as e:
+            print(f"[EmbeddingModel] Error during embedding. Fallback to local. Error: {e}")
+        
+        # Lazy load local model
+        if not hasattr(self, "local_model"):
+            from sentence_transformers import SentenceTransformer
+            self.local_model = SentenceTransformer("all-MiniLM-L6-v2")
+        return self.local_model.encode(txt)
 
 class VectorDB(DataLoader):
     def __init__(self):
         super().__init__()
-        self.client = chromadb.PersistentClient()
+        self.client = chromadb.Client()
         self.embedder = EmbeddingModel()
         self.collections = {}
-        for collection_name in ["thapar_hostels", "thapar_academics", "thapar_activities","thapar_placements"]:
+        for collection_name in ["thapar_hostels", "thapar_academics", "thapar_activities","thapar_placements","thapar_fee","thapar_syllabus"]:
             try:
                 self.client.delete_collection(collection_name)
             except:
@@ -41,8 +85,11 @@ class VectorDB(DataLoader):
         file_types = {
           "hostels":["Hostel_info.txt"],
           "activities":["TIET_Events.txt","clubs_thapar.txt","Thapar_Societies.txt"],
-          "academics":["scholarships.txt","Pg_Course_Fee.txt","Pg_Program_Structure.txt"],
-          "placements":["Placement_Record.txt"]  
+          "academics":["scholarships.txt"],
+          "fee":["course_fee.txt"],
+          "syllabus":["pg_program_structure.txt"],
+          "placements":["Placement_Record.txt"],
+          "fee":["programme_fees_structured.txt"]
         }
         
         for col_type,files in file_types.items():
@@ -56,10 +103,14 @@ class VectorDB(DataLoader):
         for filename,content in files_data.items():
             if 'hostel' in filename.lower():
                 col_type ="hostels"
-            elif 'scholarship' in filename.lower() or 'pg' in filename.lower():
+            elif 'scholarship' in filename.lower(): 
                 col_type = "academics"
             elif "placement" in filename.lower():
                 col_type ="placements"
+            elif "fee" in filename.lower():
+                col_type = "fee"
+            elif "_structure" in filename.lower():
+                col_type = "syllabus"
             else:
                 col_type = "activities"
             
@@ -76,7 +127,7 @@ class VectorDB(DataLoader):
         try:
             query_embeddings = self.embedder.embed([query])
             results = self.collections[collection_type].query(
-                query_embeddings = query_embeddings.tolist(),
+                query_embeddings = query_embeddings,
                 n_results = top_k
             )
             return results["documents"][0]
@@ -84,28 +135,40 @@ class VectorDB(DataLoader):
             print(f"\nQuery Errors:{str(e)}")
             raise
 
+import requests
+
 class Mixtral:
     def __init__(self):
         load_dotenv()
-        self.LLM = "mistral"  # Changed to Ollama's model name
-        # No API key needed for Ollama local setup
-        self.client = ollama  # Using ollama directly
-    
-    def generate(self, prompt, max_new_token=300, temperature=0.1, top_p=0.9):
+        self.GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+        self.api_url = "https://api.groq.com/openai/v1/chat/completions"
+        self.headers = {
+            "Authorization": f"Bearer {self.GROQ_API_KEY}",
+            "Content-Type": "application/json"
+        }
+
+    def generate(self, prompt, max_new_token=500, temperature=0.1, top_p=0.9):
         try:
-            response = self.client.generate(
-                model=self.LLM,
-                prompt=prompt,
-                options={
-                    'num_predict': max_new_token,
-                    'temperature': temperature,
-                    'top_p': top_p
-                }
+            payload = {
+                "model": "mistral-saba-24b",
+                "messages": [
+                    {"role": "system", "content": "You are ThaparGPT. Answer like a helpful university assistant."},
+                    {"role": "user", "content": prompt}
+                ],
+                "temperature": temperature,
+                "top_p": top_p,
+                "max_tokens": max_new_token
+            }
+
+            response = requests.post(
+                self.api_url, headers=self.headers, json=payload, timeout=10
             )
-            return response['response'].strip()
+            response.raise_for_status()
+            return response.json()["choices"][0]["message"]["content"].strip()
+
         except Exception as e:
-            print(f"Mixtral Generation Error: {str(e)}")
-            raise RuntimeError("Failed to generate any response. Check the Ollama setup.")
+            print(f"[Groq API ERROR]: {str(e)}")
+            raise RuntimeError("Groq API call failed. Check your API key or prompt formatting.")
 
 class ThaparAssistant(VectorDB, Mixtral):
     
@@ -118,8 +181,12 @@ class ThaparAssistant(VectorDB, Mixtral):
         query_lower =query.lower()
         if any(kw in query_lower for kw in ["hostel","room","mess","sharing","hall","accomodation"]):
             return "hostels"
-        elif any(kw in query_lower for kw in ["scholarships","fee","course","syllabus","program"]):
+        elif any(kw in query_lower for kw in ["scholarships"]):
             return "academics"
+        elif any(kw in query_lower for kw in ["fee","fees","course","program"]):
+            return "fee"
+        elif any(kw in query_lower for kw in ["syllabus","structure","electives","program"]):
+            return "syllabus"
         elif any(kw in query_lower for kw in ["record","package","recruiter","placement"]):
             return "placements"
         else:
@@ -145,6 +212,9 @@ class ThaparAssistant(VectorDB, Mixtral):
 3. For comparisons, maintain neutrality
 4. When estimating, disclose it's an approximation
 
+# For greetings like hello , hi , bye , thanks and thank you:
+Greet the user.
+
 Current Context:
 {context_str if context else 'No specific context provided'}
 
@@ -167,24 +237,18 @@ Then provide a 1-2 sentence response accordingly, using the format:
                 print(f"[Context {i}]: {text[:200]}...")
             prompt = self.build_prompt(query, context)
             response = self.generate(prompt)
-            if "Rs" not in response and any("Rs." in ctx for ctx in context):
-                response = "Information not found in records"
+            # if "Rs" not in response and any("Rs." in ctx for ctx in context):
+            #     response = "❌Information not found in records"
             return response
         except Exception as e:
             return f"System error: {str(e)}"
 
 assistant = ThaparAssistant()
-queries = [
-        "List all hostels in Thapar?",
-        "What is the mess fee for agira hall ?",
-        "Which coding-related societies exist?",
-        "Tell me various events that occur in Thapar?",
-        "What is the average package for MTECH CSE in Thapar?",
-        "Who are the top recruiters for MCA?",
-        "Tell me about MSc scholarships for 8.5 CGPA students",
-        "What are various computer science societies in IIT Bombay"
-]
+# queries = [
+#         "What is program structure for MCA in Thapar"
+# ]
+query=input("Enter your query:")
 
-for query in queries:
-    print(f"\n{query}")
-    print(f"\n{assistant.ask(query)}")
+# for query in queries:
+print(f"\n{query}")
+print(f"\n{assistant.ask(query)}")

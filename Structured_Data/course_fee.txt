@@ -1,0 +1,55 @@
+###MCA
+-Number of Semester: 4
+-Total Fees:Rs. 410800.0
+-Amount to be paid each semester in Rs. (Equal Installment):Rs. 102700.0
+-Tuition Fee in each semester:Rs. 63700.0
+-Development Fee in each semester:Rs. 28000.0
+-Other Charges in each semester:Rs. 11000.0
+
+
+###MSc
+-Number of Semester: 4
+-Total Fees:Rs. 202400.0
+-Amount to be paid each semester in Rs. (Equal Installment):Rs. 50600.0
+-Tuition Fee in each semester:Rs. 31600.0
+-Development Fee in each semester:Rs. 8000.0
+-Other Charges in each semester:Rs. 11000.0
+
+
+###ME/MTech - CSED, ECED, MED, EIED
+-Number of Semester: 4
+-Total Fees:Rs. 398800.0
+-Amount to be paid each semester in Rs. (Equal Installment):Rs. 99700.0
+-Tuition Fee in each semester:Rs. 70700.0
+-Development Fee in each semester:Rs. 18000.0
+-Other Charges in each semester:Rs. 11000.0
+
+
+###ME/MTech - Others
+-Number of Semester: 4
+-Total Fees:Rs. 358000.0
+-Amount to be paid each semester in Rs. (Equal Installment):Rs. 89500.0
+-Tuition Fee in each semester:Rs. 60500.0
+-Development Fee in each semester:Rs. 18000.0
+-Other Charges in each semester:Rs. 11000.0
+
+
+###MA (2 Years)
+-Number of Semester: 4
+-Total Fees:Rs. 202400.0
+-Amount to be paid each semester in Rs. (Equal Installment):Rs. 50600.0
+-Tuition Fee in each semester:Rs. 31600.0
+-Development Fee in each semester:Rs. 8000.0
+-Other Charges in each semester:Rs. 11000.0
+
+
+###MA (1 Year)
+-Number of Semester: 2
+-Total Fees:Rs. 200000.0
+-Amount to be paid each semester in Rs. (Equal Installment):Rs. 100000.0
+-Tuition Fee in each semester:Rs. 89000.0
+-Development Fee in each semester:Rs. 0.0
+-Other Charges in each semester:Rs. 11000.0
+
+
+

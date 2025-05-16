@@ -74,7 +74,7 @@ class VectorDB(DataLoader):
         self.client = chromadb.Client()
         self.embedder = EmbeddingModel()
         self.collections = {}
-        for collection_name in ["thapar_hostels", "thapar_academics", "thapar_activities","thapar_placements"]:
+        for collection_name in ["thapar_hostels", "thapar_academics", "thapar_activities","thapar_placements","thapar_fee","thapar_syllabus"]:
             try:
                 self.client.delete_collection(collection_name)
             except:
@@ -85,8 +85,11 @@ class VectorDB(DataLoader):
         file_types = {
           "hostels":["Hostel_info.txt"],
           "activities":["TIET_Events.txt","clubs_thapar.txt","Thapar_Societies.txt"],
-          "academics":["scholarships.txt","Pg_Course_Fee.txt","Pg_Program_Structure.txt"],
-          "placements":["Placement_Record.txt"]  
+          "academics":["scholarships.txt"],
+          "fee":["course_fee.txt"],
+          "syllabus":["pg_program_structure.txt"],
+          "placements":["Placement_Record.txt"],
+          "fee":["programme_fees_structured.txt"]
         }
         
         for col_type,files in file_types.items():
@@ -100,10 +103,14 @@ class VectorDB(DataLoader):
         for filename,content in files_data.items():
             if 'hostel' in filename.lower():
                 col_type ="hostels"
-            elif 'scholarship' in filename.lower() or 'pg' in filename.lower():
+            elif 'scholarship' in filename.lower(): 
                 col_type = "academics"
             elif "placement" in filename.lower():
                 col_type ="placements"
+            elif "fee" in filename.lower():
+                col_type = "fee"
+            elif "_structure" in filename.lower():
+                col_type = "syllabus"
             else:
                 col_type = "activities"
             
@@ -174,8 +181,12 @@ class ThaparAssistant(VectorDB, Mixtral):
         query_lower =query.lower()
         if any(kw in query_lower for kw in ["hostel","room","mess","sharing","hall","accomodation"]):
             return "hostels"
-        elif any(kw in query_lower for kw in ["scholarships","fee","course","syllabus","program"]):
+        elif any(kw in query_lower for kw in ["scholarships"]):
             return "academics"
+        elif any(kw in query_lower for kw in ["fee","fees","course","program"]):
+            return "fee"
+        elif any(kw in query_lower for kw in ["syllabus","structure","electives","program"]):
+            return "syllabus"
         elif any(kw in query_lower for kw in ["record","package","recruiter","placement"]):
             return "placements"
         else:
@@ -226,8 +237,8 @@ Then provide a 1-2 sentence response accordingly, using the format:
                 print(f"[Context {i}]: {text[:200]}...")
             prompt = self.build_prompt(query, context)
             response = self.generate(prompt)
-            if "Rs" not in response and any("Rs." in ctx for ctx in context):
-                response = "Information not found in records"
+            # if "Rs" not in response and any("Rs." in ctx for ctx in context):
+            #     response = "❌Information not found in records"
             return response
         except Exception as e:
             return f"System error: {str(e)}"
