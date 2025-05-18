@@ -266,10 +266,7 @@ def api_ask():
     query = request.json['query']
     response = assistant.ask(query)
 
-    return jsonify({
-        'query': query,
-        'response': response
-    })
+    return response
 
 @app.route('/', methods=['GET'])
 def health_check():
