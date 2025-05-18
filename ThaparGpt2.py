@@ -218,8 +218,6 @@ Greet the user.
 Current Context:
 {context_str if context else 'No specific context provided'}
 
-User Question: {query}
-
 First determine if this is:
 A) A specific factual query about Thapar (use context)
 B) A general higher-education question (wider knowledge)
@@ -232,9 +230,9 @@ Then provide a 1-2 sentence response accordingly, using the format:
         try:
             col_type = self._determineCollectionType(query)
             context = self.query(query, col_type)
-            print(f"\nRETRIEVED CONTEXT FOR '{query}':")
-            for i, text in enumerate(context, 1):
-                print(f"[Context {i}]: {text[:200]}...")
+            # print(f"\nRETRIEVED CONTEXT FOR '{query}':")
+            # for i, text in enumerate(context, 1):
+            #     print(f"[Context {i}]: {text[:200]}...")
             prompt = self.build_prompt(query, context)
             response = self.generate(prompt)
             # if "Rs" not in response and any("Rs." in ctx for ctx in context):
