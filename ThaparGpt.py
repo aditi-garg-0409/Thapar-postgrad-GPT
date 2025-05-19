@@ -141,6 +141,7 @@ class Mixtral:
     def __init__(self):
         load_dotenv()
         self.GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+        print(f"GROQ_API_KEY: {self.GROQ_API_KEY}")
         self.api_url = "https://api.groq.com/openai/v1/chat/completions"
         self.headers = {
             "Authorization": f"Bearer {self.GROQ_API_KEY}",
