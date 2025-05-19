@@ -150,7 +150,7 @@ class Mixtral:
     def generate(self, prompt, max_new_token=500, temperature=0.1, top_p=0.9):
         try:
             payload = {
-                "model": "llama3-70b-8192",
+                "model": "llama3-8b-8192",
                 "messages": [
                     {"role": "system", "content": "You are ThaparGPT. Answer like a helpful university assistant."},
                     {"role": "user", "content": prompt}
@@ -218,13 +218,15 @@ Greet the user.
 Current Context:
 {context_str if context else 'No specific context provided'}
 
+User Question: {query}
+
 First determine if this is:
 A) A specific factual query about Thapar (use context)
 B) A general higher-education question (wider knowledge)
 C) Administrative (dates/processes - be precise)
 
 Then provide a 1-2 sentence response accordingly, using the format:
-[Response Type]: [Your answer]"""
+[Your answer]"""
     
     def ask(self, query):
         try:
