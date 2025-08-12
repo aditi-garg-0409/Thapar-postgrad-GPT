@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.css": "/ThaparEnv/Web/thapargpt-frontend/static/css/main.ccff877f.css",
+    "main.js": "/ThaparEnv/Web/thapargpt-frontend/static/js/main.c09eb93c.js",
+    "index.html": "/ThaparEnv/Web/thapargpt-frontend/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.ccff877f.css",
+    "static/js/main.c09eb93c.js"
+  ]
+}
