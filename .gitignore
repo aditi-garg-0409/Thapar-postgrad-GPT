@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Created by venv; see https://docs.python.org/3/library/venv.html
 include
 Lib
@@ -7,3 +8,20 @@ pyvenv.cfg
 share
 chroma
 CACHEDIR.TAG
+=======
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+>>>>>>> 2bca343500089ae6027e2e1368295cbf00edae66

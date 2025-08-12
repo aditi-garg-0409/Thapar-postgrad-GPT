@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "498766788976",
+    "firebase_url": "https://thapar-pg-gpt-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "thapar-pg-gpt",
+    "storage_bucket": "thapar-pg-gpt.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498766788976:android:4f6b7ad4c3b739ebec77b5",
+        "android_client_info": {
+          "package_name": "com.example.thaparpg_gpt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXHOTjSaA8DwuWejW3OvJrYe_LZ4KOXxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
